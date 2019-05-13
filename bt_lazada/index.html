@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lazada</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+		body{
+			font-size: 16px;
+			font-family: roboto-regular;
+		}
+		#menu{
+			top: 0;
+			left: -200px;
+			background: #f7f7f7;
+			font-size: 13px;
+			width: 200px;
+			height: 334px;
+			list-style-type: none;
+			padding: 8px 0 12px;
+			position: relative;
+		}
+		#menu ul li{
+			height: 27px;
+			line-height: 27px;
+			padding: 0 8px;
+		}
+		#menu ul li a{
+			text-decoration: none;
+			color: #757575;
+			display: block;
+		}
+		#menu ul li:hover{
+			background:#e5e5e5;
+			color:#1a9cb7;
+		}
+		#menu ul li a:hover{
+		 	color: #6e55b4;
+
+		 }
+		 #menu ul li .mini_menu{
+		 	position: absolute;
+		 	display: none;
+		 	width: 200px;
+		 	list-style-type: none;
+		 	background: #f7f7f7;
+		 	left: 200px;
+		 	top: 0;
+		 }
+		 #menu ul li:hover .mini_menu{
+		 	display: block;
+		 }
+		 #menu ul li .mini_menu > li >.sup_menu{
+		 	position: absolute;
+		 	display: none;
+		 	left: 200px;
+		 	width: 200px;
+		 	list-style-type: none;
+		 	background: #f7f7f7;
+		 	top: 0;
+		} 
+		  #menu ul li .mini_menu li:hover .sup_menu{
+		  	display: block;
+		}
+		nav{
+			width: 0;
+			height: 0;
+		}
+		#khung{
+			padding-left: 200px;
+ 			position: relative;
+ 			left: 0;
+ 			width: 100%;
+ 		}
+		#mui_ten img{
+			height: 50px;
+		 }
+		#mui_ten{
+			position: fixed;
+			right: 30px;
+			bottom: 30px;
+		}
+		#logo img{
+			max-width: 300px;
+ 			overflow: auto;
+ 			margin: 0 auto; 
+			overflow: auto;
+			display: block;
+			margin-left: auto;
+			margin-right: auto
+		}
+		p, h3{
+			text-align: center;
+		}
+		#slogan {
+ 			color: #8997A0;
+			font-size: 18px;
+		}
+		article p{
+			text-align: justify;
+			text-indent: 20px; 
+		}
+		.gioi_thieu{
+			padding: 19px 20%;
+ 			background: #EFEFEF;
+ 			border: 1px solid #E8E8E8;
+		}
+		footer {
+ 			font-size: 110%;
+ 			border-top: 1px solid #E6E6E6;
+ 			color: #838383;
+ 			padding: 18px 36px;
+		}
+
+	</style>
+</head>
+<body>
+<div id="khung">
+	<nav>
+	<div id="menu">
+ 		<ul>
+ 			<li><a href="#">Thiết Bị Điên Tử</a>
+ 				<ul class="mini_menu">
+ 					<li><a href="#">Điện Thoại Di động</a></li>
+ 					<li><a href="#">Máy Tính Bảng</a></li>
+ 					<li><a href="#">Laptop</a>
+ 						<ul class="sup_menu">
+ 							<li><a href="#">Laptop cơ bản</a></li>
+ 							<li><a href="#">Laptop chơi game</a></li>
+ 							<li><a href="#">Macbook</a></li>
+ 							<li><a href="#">Dòng 2 trong 1</a></li>
+ 						</ul>
+ 					</li>
+ 					<li><a href="#">Máy Tính Để bàn</a></li>
+ 					<li><a href="#">Âm Thanh</a></li>
+ 					<li><a href="#">Máy Chơi Game</a></li>
+ 					<li><a href="#">Camera hành đông/Máy Quay</a></li>
+ 					<li><a href="#">Camera giám sát</a></li>
+ 					<li><a href="#">Camera kỹ thuật số</a></li>
+ 					<li><a href="#">Thiết bị số</a></li>
+ 				</ul>
+ 			</li>
+ 			<li><a href="#">Phụ Kiện Điện Tử</a></li>
+ 			<li><a href="#">TV & Thiết Bị Điện Rử Gia Dụng</a></li>
+ 			<li><a href="#">Sức Khỏa & Làm Đẹp</a></li>
+ 			<li><a href="#">Hàng Mẹ,Bé & Đồ Chơi</a></li>
+ 			<li><a href="#">Siêu Thị Tạp Hóa</a></li>
+ 			<li><a href="#">Hàng Gia dụng & Đời sống</a></li>
+ 			<li><a href="#">Thời Trang Nữ</a></li>
+ 			<li><a href="#">Thời Trang Nam</a></li>
+ 			<li><a href="#">Phụ Kiện Thời Trang</a></li>
+ 			<li><a href="#">Thể Thao & Du lịch</a></li>
+ 			<li><a href="#">Ôtô, Xe Máy & Thiết Bị Định Vị</a></li>
+ 		</ul>
+	</div>
+	</nav>
+	<header>
+		<div id="logo"><img src="../img/Marvel.png" alt="Marvel" title="Marvel"></div>
+        <div id="slogan">
+        	<h3>Vũ trụ Điện ảnh Marvel</h3>
+        </div>
+	</header>
+	<article>
+		<div class="gioi_thieu">
+			<h3>Vũ trụ hư cấu</h3>
+			<p>Vũ trụ Điện ảnh Marvel là một thương hiệu truyền thông và một vũ trụ chia sẻ hư cấu, tập trung vào một loạt các bộ phim siêu anh hùng do Marvel Studios sản xuất độc lập và dựa trên các nhân vật trong những ấn phẩm của Marvel Comics. Thương hiệu mở rộng bao gồm những mảng truyện tranh, phim ngắn và phim truyền hình.</p>
+		</div>
+		<h3>Người Sắt (2008)</h3>
+		<p>Nhà thiên tài, tỉ phú, tay chơi Tony Stark bị bắt cóc và cầm tù bởi tổ chức khủng bố Ten Rings, anh đã tạo ra một bộ giáp để thoát ra. Stark sau đó trở về Hoa Kỳ và thề rằng sẽ bảo vệ mọi người trong bộ giáp Iron Man. Tuy nhiên, anh phải đối đầu với Obadiah Stane, một trụ cột trong công ty có dã tâm chiếm đoạt tập đoàn Stark bằng cách tạo ra bộ giáp Iron Monger.</p>
+		<h3>Người Khổng Lồ Xanh Phi Thường (2008)</h3>
+		<p>Dựa theo những ghi chép cũ, đại tướng Thaddeus "Thunderbolt" Ross muốn gây dựng lại chương trình siêu chiến binh nhờ vào sự giúp đỡ của nhà khoa học Bruce Banner. Khi thí nghiệm thất bại và Bruce Banner bị nhiễm tia gamma, anh bị biến thành Hulk bất cứ khi nào nhịp tim của mình tăng cao. Banner bỏ trốn và Ross cho quân đội săn lùng anh, trong đó có một lính đặc nhiệm tên Emil Blonsky. Ngưỡng mộ Hulk, Blonsky tiêm máu của Banner và biến thành quái vật Abomination.</p>
+		<h3>Người Sắt 2 (2010)</h3>
+		<p>Là siêu anh hùng nổi tiếng toàn thế giới, Tony Stark trở thành mục tiêu của cả quân đội Hoa Kỳ và những kẻ ác muốn cướp lấy công nghệ của anh – kể cả tay kỹ sư thiên tài đối thủ Ivan Vanko (Whiplash). Nhà công nghiệp Justin Hammer tài trợ cho Vanko để tạo ra các bộ giáp đối mặt với Stark, nhưng hắn lại có kế hoạch riêng của mình. Trong khi đó, Black Widow được Nick Fury gài vào để theo dõi Stark, và bạn thân của anh là Rhodey trở thành siêu anh hùng War Machine.</p>
+		<h3>Thor (2011)</h3>
+		<p>Dù là một chiến binh dũng cảm và hùng mạnh của Asgard, Thor lại là một người lãnh đạo kiêu ngạo. Tính nóng nảy và hấp tấp của Thor đã khiến vua cha Odin tước bỏ sức mạnh cùng búa thần Mjolnir của con mình, trước khi đầy anh xuống Trái đất (Midgard). Thor làm quen với một nhóm người phàm ở New Mexico, yêu nhà khoa học Jane Foster và dần học được sự khiêm tốn. Trong lúc đó ở Asgard, Odin chìm vào giấc ngủ còn Loki biết được mình không phải con ruột của Odin. Hắn đưa cỗ máy Destroyer đến Trái đất để sát hại anh mình.</p>
+		<h3>Captain America: Kẻ Báo Thù Đầu Tiên (2011)</h3>
+		<p>Để tiêu diệt phe Trục trong Thế Chiến Thứ 2, quân đội Mỹ đã tạo ra dự án Siêu Chiến Binh và người được chọn lựa là Steve Rogers, một chàng trai gầy gò ốm yếu với trái tim quả cảm. Quá trình chuyển đổi thành công, Rogers trở thành Captain America, một biểu tượng cho hy vọng của phe Đồng Minh. Anh cùng các đồng đội săn lùng Red Skull, thủ lĩnh của tổ chức xấu xa HYDRA. Hắn sở hữu một khối lập phương đầy nguy hiểm có tên Tesseract, đó chính là Viên đá Không gian.</p>
+		<h3>Biệt Đội Siêu Anh Hùng (2012)</h3>
+		<p>Nhận lệnh của Thanos, Loki đến Trái Đất qua cánh cổng do khối Tesseract mở ra. Hắn chiếm Tesseract và âm mưu mở ra một cánh cổng lớn hơn để đưa binh đoàn Chitauri đến. Để đối đầu mối hiểm họa, Nick Fury tập hợp Biệt đội Avengers gồm: Người Sắt, Captain America, Hulk, Thor, Black Widow và Hawkeye. Vượt qua các bất đồng, những anh hùng hùng mạnh nhất Trái đất đã sát cánh cùng nhau để chống lại đội quân của Loki.</p>
+		<h3>Người Sắt 3 (2013)</h3>
+		<p>Tony Stark miệt mài chế tạo các bộ giáp để bảo vệ mình và những người thân yêu. Cùng lúc đó, tên khủng bố Mandarin liên tục thực hiện các vụ đánh bom bằng công nghệ Extremis và làm bị thương Happy Hogan, bạn thân của Stark. Stark thách thức Mandarin và bị hắn cho người đánh sập nhà. Sau khi thoát chết, Tony Stark điều tra và biết kẻ đứng sau tất cả là khoa học gia Aldrich Killian, còn Mandarin kia chỉ là một diễn viên đóng giả.</p>
+		<h3>Thor 2: Thế giới Bóng Tối (2013)</h3>
+		<p>Sau thất bại trong Biệt đội siêu anh hùng, Loki bị nhốt trong buồng giam ở Asgard. Trong lúc đó, một mối đe dọa từ thời cổ đại lại trỗi dậy, những người Dark Elf do Malekith lãnh đạo. Malekith tìm lại được Aether, đó chính là Viên đá Thực tại và âm mưu sử dụng nó để phá hủy Chín Cõi Giới. Thor phải hợp tác với Loki và những người bạn ở Trái đất để ngăn chặn hắn.</p>
+		<h3>Captain America 2: Chiến Binh Mùa Đông (2014)</h3>
+		<p>Captain America (giờ là một chỉ huy của S.H.I.E.L.D.) cùng với Black Widow thực hiện thành công nhiều nhiệm vụ. Nhưng sau khi Nick Fury bị tấn công, Steve Rogers nhận ra S.H.I.E.L.D. đã bị các đặc vụ của HYDRA thâm nhập trong nhiều năm. Sát thủ nguy hiểm nhất của HYDRA là Chiến binh Mùa đông, vốn là người bạn cũ Bucky Barnes của Steve. Bucky đã không chết hồi Thế chiến thứ 2 mà đã bị HYDRA bắt về để lập trình lại não. Cùng với Black Widow và người bạn mới quen là Falcon, Steve quyết tâm thanh lọc S.H.I.E.L.D. và đi tìm Bucky.</p>
+		<h3>Vệ Binh Dải Ngân Hà (2014)</h3>
+		<p>Peter Quill bị bắt khỏi Trái đất năm 1988, từ đó anh trở thành một tên hải tặc không gian với biệt danh Star-Lord. Trong một nhiệm vụ, Quill tìm được một quả cầu, bên trong là Viên đá Sức mạnh, nhưng rồi anh lại bị bắt ở hành tinh Xandar của Nova Corps, một tổ chức gìn giữ hòa bình trong vũ trụ. Quill cùng các bạn tù Gamora, Rocket Racoon, Groot, Drax cùng thoát ra. Họ phải ngăn cản âm mưu của tên chiến binh Kree là Ronan, kẻ muốn dùng quả cầu để hủy diệt Xandar.</p>
+		<h3>Avengers: Đế Chế Ultron (2015)</h3>
+		<p>Đội Avengers săn lùng tàn dư HYDRA và thu giữ cây trượng của Loki, bên trong là Viên đá Tâm trí. Tony Stark sử dụng cây trượng cho chương trình gìn giữ hòa bình Ultron mà anh tạo ra. Thế nhưng thử nghiệm này lại tạo ra một trí tuệ nhân tạo hung ác muốn thanh trừng cả thế giới. Ultron hợp tác với hai kẻ có siêu năng lực là Scarlet Witch và Quicksilver để thực hiện kế hoạch của mình.</p>
+		<h3>Người Kiến (2015)</h3>
+		<p>Tên trộm hoàn lương Scott Lang vừa được thả khỏi tù, nhưng không thể kiếm một việc làm ổn định. Tình cờ anh gặp được nhà khoa học Hank Pym và được ông trao cho bộ giáp Ant-Man có khả năng thu nhỏ. Cùng con gái Hank Pym là Hope van Dyne, Scott Lang tìm cách cướp một vũ khí nguy hiểm từ tay Darren Cross / Yellowjacket, học trò cũ của Pym.</p>
+		<h3>Captain America: Nội Chiến Siêu Anh Hùng (2016)</h3>
+		<p>Do những thiệt hại sau những trận chiến của nhóm Avengers, chính phủ đưa ra Hiệp ước Sokovia để kiểm soát các siêu anh hùng. Captain America (phe tự do) và Iron Man (phe chính phủ) mâu thuẫn sâu sắc trong vấn đề này. Sau khi một vụ nổ bom ở Liên Hiệp Quốc giết chết nhiều người (trong đó có T'Chaka, vua của vương quốc Wakanda), đối tượng bị tình nghi là Winter Soldier. Khi bảo vệ bạn mình, Captain America phát hiện ra một âm mưu to lớn hơn. Một trận chiến nổ ra giữa nhóm của Captain America bao gồm Captain America, Winter Soldier, Falcon, Ant-Man, Scarlet Witch, Hawkeye và nhóm của Iron Man bao gồm Iron Man, War Machine, Vision, Spider-Man, Black Panther, Black Widow. Thế nhưng, tất cả chỉ là âm mưu của kẻ phản diện Zemo để các siêu anh hùng chống lại nhau.</p>
+		<h3>Doctor Strange: Phù Thủy Tối Thượng (2016)</h3>
+		<p>Sau khi Stephen Strange, một trong những nhà giải phẫu thần kinh nổi tiếng nhất thế giới, gặp một tai nạn xe hơi và bị chấn thương tay, khiến anh không thể tiếp tục sự nghiệp của mình, anh quyết định sẽ lên đường đi tìm cách để chữa trị, và trong cuộc hành trình anh đã đi đến Kamar-Taj và đã gặp Thượng Cổ Tôn Giả. Bà đã dạy Strange cách sử dụng các võ thuật huyền bí để có thể giải cứu Trái Đất khỏi các hiểm hoạ khôn lường của tên quái vật Dormmamu.</p>
+		<h3>Vệ Binh Dải Ngân Hà 2 (2017)</h3>
+		<p>Trong năm 2014, Peter Quill, Gamora, Drax, Rocket và Baby Groot nổi tiếng là những "Vệ binh dải Ngân hà". Ayesha, lãnh đạo của chủng tộc Sovereign, có thuê các Vệ binh bảo vệ pin quý khỏi một con quái vật để đổi lấy cô em gái Nebula của Gamora, người đã bị bắt khi tìm cách đánh cắp pin. Sau khi phát hiện Rocket đánh cắp một số pin cho mình, Sovereign tấn công tàu của các Vệ binh với một hạm đội máy bay không người lái. Những chiếc máy bay không người lái này bị phá hủy bởi một con tàu bí ẩn, tàu của đội Vệ binh rơi xuống đất trên một hành tinh gần đó. Con tàu lạ đáp xuống và có hai người bước ra, một trong số đó là cha của Quill, Ego và người còn lại là người hầu cận Mantis. Ego mời Quill, Gamora và Drax tới hành tinh của ông, trong khi Rocket và Groot ở lại để sửa chữa con tàu và bảo vệ Nebula.</p>
+	</article>
+	<footer>
+		<p>Copyright &copy; 2019.</p>
+	</footer>
+	<div id="mui_ten">
+		<a href="index.html#menu"><img src="../img/mui.png"></a>
+	</div>
+</div>
+</body>
+</html>

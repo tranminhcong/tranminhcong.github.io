@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hover anh</title>
+	<title>Image_Gallery</title>
 	<meta charset="utf-8">
-</head>
-<style type="text/css">
+	<style type="text/css">
 		*{
 			margin: 0;
 			padding: 0;
@@ -13,48 +12,268 @@
     		display: block;
     		text-align: center;
 		}
-		img{
- 			width: calc(100% / 3 - 20px);
- 			border-bottom: 5px solid grey;
- 			border-radius: 20px ;
- 			float: left;
- 			margin:10px;
- 			vertical-align: middle;
- 		}
- 		.anh:hover img{
- 			transform: scale(1.2);
- 		}
-
-
-</style>
-
+		body{
+			font-family: sans-serif;
+			color:#333;
+		}
+		#menu ul{
+			list-style-type: none;
+			background: black;
+			text-align: center;
+		}
+		#menu ul li{
+			color: #f1f1f1;
+			display: inline-table;
+			width:120px;
+			height: 40px;
+			line-height: 40px;
+			position: relative;
+		}
+		#menu ul li a{
+			color: #f1f1f1;
+			text-decoration: none;
+			display: block;
+		}
+		#menu ul li a:hover {
+			background: #f1f1f1;
+			color: #333;	
+		}
+		#menu ul li > .list{
+			display: none;
+			position: absolute;
+			z-index: 3;
+		}
+		#menu ul li:hover .list{
+			display: block;
+		}
+		#marvel{
+			max-width: 80px;
+			margin-top: 5px;
+		}
+		.list img{
+ 			border-radius: 30px;
+ 			max-width: 100%;
+		}
+		.cell {
+    		width: calc(100% / 3 - 27px);
+    		float: left;
+    		padding: 10px;
+    		position: relative;
+    		z-index: 1;
+		}
+		.anh{
+			padding: 30px;
+			box-shadow: inset 0 0 2px rgba(0,0,0,.8), inset 0 0 0px rgba(0,0,0,0), inset 0 -7px 0 rgba(0,0,0,.6), inset 0 0 0 rgba(0,0,0,0);
+			border-radius: 30px;
+		}
+		.khung {
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+    		height: 100%;
+    		z-index: 2;
+		}
+		.khung .bo {
+    		width: 100%;
+    		height: 100%;
+    		cursor: pointer;
+    		border-radius: 30px;
+    	}
+    	.khung .bo .di{
+    		position: relative;
+    		top: 50%;
+    		font-size: 20px;
+    		color: white;
+    		opacity: 0;
+    		cursor: pointer;
+    	}
+    	.khung .bo:hover {
+			box-shadow: inset 0 0 0 200px rgba(200,95,66, 0.4), inset 0 0 0 150px rgba(255,255,255,0.8);
+		}
+		.khung .bo:hover .di{
+			opacity: 1;
+			transition-delay:0.4s;
+			transform: scale(1);
+		}
+		
+	</style>
+</head>
 <body>
+	<div id="menu">
+		<ul>
+			<li><a href="index.html">Trang Chủ</a></li>
+			<li>
+				<a href="">List</a>
+				<ul class="list">
+					<li><a href="index.html#iron_man">Iron Man</a></li>
+					<li><a href="index.html#Captain_Marvel">Captain Marvel</a></li>
+					<li><a href="index.html#BLACK_WIDOW">Black Window</a></li>
+					<li><a href="index.html#Thanor">Thanor</a></li>
+					<li><a href="index.html#Black_Panther">Black Panther</a></li>
+					<li><a href="index.html#CAPTAIN_AMERICA">Captain America</a></li>
+					<li><a href="index.html#HAWKEYE">Hawkeye</a></li>
+					<li><a href="index.html#Goose_The_Cat">Goose The Cat</a></li>
+					<li><a href="index.html#Spider_Man">Spider Man</a></li>
+					<li><a href="index.html#Thor">Thor</a></li>
+					<li><a href="index.html#Hulk">Hulk</a></li>
+					<li><a href="index.html#Yon_Rogg">Yon Rogg</a></li>
+				</ul>
+			<li> <a href=""><img src="img/Marvel.png" id="marvel"></a></li>
+			<li><a href="anh.html">Bt Photo</a></li>
+			<li><a href="bai_thuc_4.html">Bài TH 4</a></li>
+		</ul>
+	</div>
+</div>
+<div class="list">
+	<div class="cell">
 		<div  class="anh" id="iron_man">
-			<img src="../img/iron_man.jpg" alt="Iron Man (Tony Stark)" title="Iron Man (Tony Stark)">
+			<img src="img/iron_man.jpg" alt="Iron Man (Tony Stark)" title="Iron Man (Tony Stark)">
 		</div>
+		<div class="khung">
+			<div class="bo">
+				<div class="di">
+					Iron Man
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
 		<div class="anh" id="CAPTAIN_AMERICA">
-			<img src="../img/cap.jpg" alt="CAPTAIN AMERICA" title="CAPTAIN AMERICA">
+			<img src="img/cap.jpg" alt="CAPTAIN AMERICA" title="CAPTAIN AMERICA">
 		</div>
+		<div class="khung">
+			<div class="bo">
+				<div class="di">
+					CAPTAIN AMERICA
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
 		<div class="anh" id="BLACK_WIDOW">
-			<img src="../img/BLACK WIDOW.jpg" alt="BLACK WIDOW" title="BLACK WIDOW">
+			<img src="img/BLACK WIDOW.jpg" alt="BLACK WIDOW" title="BLACK WIDOW">
 		</div>
+		<div class="khung">
+			<div class="bo">
+				<div class="di">
+					BLACK WIDOW
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
 		<div class="anh" id="Thor">
-			<img src="../img/Thor.jpg" alt="Thor" title="Thor">
+			<img src="img/Thor.jpg" alt="Thor" title="Thor">
 		</div>
+		<div class="khung">
+			<div class="bo">
+				<div class="di">
+					Thor
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
 		<div class="anh" id ="Black_Panther">
-			<img src="../img/black_panther.jpg" alt="Black Panther" title="Black Panther">
+			<img src="img/black_panther.jpg" alt="Black Panther" title="Black Panther">
 		</div>
+		<div class="khung">
+			<div class="bo">
+				<div class="di">
+					Black Panther
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
 		<div class="anh" id ="HAWKEYE">
-			<img src="../img/HAWKEYE.jpg" alt="HAWKEYE" title="HAWKEYE">
+			<img src="img/HAWKEYE.jpg" alt="HAWKEYE" title="HAWKEYE">
 		</div>
+		<div class="khung">
+			<div class="bo">
+				<div class="di">
+					HAWKEYE
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
 		<div class="anh" id ="Goose_The_Cat">
-			<img src="../img/cat.jpg" alt="Goose The Cat" title="Goose The Cat">
+			<img src="img/cat.jpg" alt="Goose The Cat" title="Goose The Cat">
 		</div>
+		<div class="khung">
+			<div class="bo">
+				<div class="di">
+					Goose The Cat
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
 		<div class="anh" id ="Spider_Man">
-			<img src="../img/spider_man.jpg" alt="Spider Man" title="Spider Man">
+			<img src="img/spider_man.jpg" alt="Spider Man" title="Spider Man">
 		</div>
+		<div class="khung">
+			<div class="bo">
+				<div class="di">
+					Spider Man
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
 		<div class="anh" id ="Thanor">
-			<img src="../img/thanor.jpg" alt="Thanor" title="Thanor">
+			<img src="img/thanor.jpg" alt="Thanor" title="Thanor">
 		</div>
+		<div class="khung">
+			<div class="bo">
+				<div class="di">
+					Thanor
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
+		<div class="anh" id ="Captain_Marvel">
+			<img src="img/cap_marvel.jpg" alt="Captain Marvel" title="Captain Marvel">
+		</div>
+		<div class="khung">
+			<div class="bo">
+				<div class="di">
+					Captain Marvel
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
+		<div class="anh" id ="Hulk">
+			<img src="img/hulk.jpg" alt="Hulk" title="Hulk">
+		</div>
+		<div class="khung">
+			<div class="bo">
+				<div class="di">
+					Hulk
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cell">
+		<div class="anh" id ="Yon_Rogg">
+			<img src="img/yon.jpg" alt="Yon Rogg" title="Yon Rogg">
+		</div>
+		<div class="khung">
+			<div class="bo">
+				<div class="di">
+					Yon Rogg
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<audio autoplay="">
+	<source src="nhac/nhac.mp3" type=" audio/mpeg">	
+</audio>
+
 </body>
 </html>
