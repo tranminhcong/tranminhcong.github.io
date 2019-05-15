@@ -87,11 +87,16 @@
     		color: white;
     		opacity: 0;
     		cursor: pointer;
-    	}.khung .bo:hover .di{
+    	}
+
+		.khung .bo:hover .di{
 			opacity: 1;
-			transition-delay:0.4s;
+			transition-delay:0.2s;
 			transform: scale(1.5);
 		}
+    	a: link {
+ 			color: red;
+ 		}
 	</style>
 </head>
 <body>
@@ -101,29 +106,22 @@
 			<li>
 				<a href="">List</a>
 				<ul class="list">
-					<li><a href="index.html#iron_man">Iron Man</a></li>
-					<li><a href="index.html#Captain_Marvel">Captain Marvel</a></li>
-					<li><a href="index.html#BLACK_WIDOW">Black Window</a></li>
-					<li><a href="index.html#Thanor">Thanor</a></li>
-					<li><a href="index.html#Black_Panther">Black Panther</a></li>
-					<li><a href="index.html#CAPTAIN_AMERICA">Captain America</a></li>
-					<li><a href="index.html#HAWKEYE">Hawkeye</a></li>
-					<li><a href="index.html#Goose_The_Cat">Goose The Cat</a></li>
-					<li><a href="index.html#Spider_Man">Spider Man</a></li>
-					<li><a href="index.html#Thor">Thor</a></li>
-					<li><a href="index.html#Hulk">Hulk</a></li>
-					<li><a href="index.html#Yon_Rogg">Yon Rogg</a></li>
+					<li><a href="ind.html#iron_man">Iron Man</a></li>
+					<li><a href="ind.html#CAPTAIN_AMERICA">CAPTAIN</a></li>
+					<li><a href="ind.html#BLACK_WIDOW">Black Window</a></li>
+					<li><a href="ind.html#Black Panther">Black Panther</a></li>
+					<li><a href="ind.html#Thor">Thor</a></li>
+					<li><a href="ind.html#HAWKEYE">HAWKEYE</a></li>
 				</ul>
-			<li> <a href=""><img src="img/Marvel.png" id="marvel"></a></li>
-			<li><a href="anh.html">Bt Photo</a></li>
-			<li><a href="bai_thuc_4.html">Bài TH 4</a></li>
+			<li><a href="#">Giới Thiệu</a></li>
+			<li><a href="#">Liên Hệ</a></li>
 		</ul>
 	</div>
 </div>
 <div class="list">
 	<div class="cell">
 		<div  class="anh" id="iron_man">
-			<img src="img/iron_man.jpg" alt="Iron Man (Tony Stark)" title="Iron Man (Tony Stark)">
+			<a data-click-type="img/iron_man.jpg" href="iron_man.html"><img src="img/iron_man.jpg" alt="Iron Man (Tony Stark)" title="Iron Man (Tony Stark)">
 		</div>
 		<div class="khung">
 			<div class="bo">
@@ -132,10 +130,12 @@
 				</div>
 			</div>
 		</div>
+		<br/>
+		<a href="iron_man.html" class="iron_man"><b>IRON MAN</b></a>
 	</div>
 	<div class="cell">
 		<div class="anh" id="CAPTAIN_AMERICA">
-			<img src="img/cap.jpg" alt="CAPTAIN AMERICA" title="CAPTAIN AMERICA">
+			<a data-click-type="img/cap.jpg" href="cap.html"><img src="img/cap.jpg" alt="CAPTAIN AMERICA" title="CAPTAIN AMERICA">				
 		</div>
 		<div class="khung">
 			<div class="bo">
@@ -144,10 +144,12 @@
 				</div>
 			</div>
 		</div>
+		<br/>
+		<a href="cap.html" class="cap"><b>CAPTAIN AMERICA</b></a>
 	</div>
 	<div class="cell">
 		<div class="anh" id="BLACK_WIDOW">
-			<img src="img/BLACK WIDOW.jpg" alt="BLACK WIDOW" title="BLACK WIDOW">
+			<a data-click-type="img/BLACK WIDOW.jpg" href="black.html"><img src="img/BLACK WIDOW.jpg" alt="BLACK WIDOW" title="BLACK WIDOW">
 		</div>
 		<div class="khung">
 			<div class="bo">
@@ -156,10 +158,12 @@
 				</div>
 			</div>
 		</div>
+		<br/>
+		<a href="black.html" class="balck"><b>BLACK WIDOW</b></a>
 	</div>
 	<div class="cell">
 		<div class="anh" id="Thor">
-			<img src="img/Thor.jpg" alt="Thor" title="Thor">
+			<a data-click-type="img/Thor.jpg" href="thor.html"><img src="img/Thor.jpg" alt="Thor" title="Thor">
 		</div>
 		<div class="khung">
 			<div class="bo">
@@ -168,10 +172,12 @@
 				</div>
 			</div>
 		</div>
+		<br/>
+		<a href="thor.html" class="Thor"><b>Thor</b></a>
 	</div>
 	<div class="cell">
 		<div class="anh" id ="Black_Panther">
-			<img src="img/black_panther.jpg" alt="Black Panther" title="Black Panther">
+			<a data-click-type="img/black_panther.jpg" href="Black2.html"><img src="img/black_panther.jpg" alt="Black Panther" title="Black Panther">
 		</div>
 		<div class="khung">
 			<div class="bo">
@@ -180,10 +186,12 @@
 				</div>
 			</div>
 		</div>
+		<br/>
+		<a href="Black2.html" class="baclk2"><b>Black Panther</b></a>
 	</div>
 	<div class="cell">
 		<div class="anh" id ="HAWKEYE">
-			<img src="img/HAWKEYE.jpg" alt="HAWKEYE" title="HAWKEYE">
+			<a data-click-type="img/HAWKEYE.jpg" href="HAWKEYE.html"><img src="img/HAWKEYE.jpg" alt="HAWKEYE" title="HAWKEYE">
 		</div>
 		<div class="khung">
 			<div class="bo">
@@ -192,83 +200,10 @@
 				</div>
 			</div>
 		</div>
+		<br/>
+		<a href="HAWKEYE.html" class="HAWKEYE"><b>HAWKEYE</b></a>
 	</div>
-	<div class="cell">
-		<div class="anh" id ="Goose_The_Cat">
-			<img src="img/cat.jpg" alt="Goose The Cat" title="Goose The Cat">
-		</div>
-		<div class="khung">
-			<div class="bo">
-				<div class="di">
-					Goose The Cat
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="cell">
-		<div class="anh" id ="Spider_Man">
-			<img src="img/spider_man.jpg" alt="Spider Man" title="Spider Man">
-		</div>
-		<div class="khung">
-			<div class="bo">
-				<div class="di">
-					Spider Man
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="cell">
-		<div class="anh" id ="Thanor">
-			<img src="img/thanor.jpg" alt="Thanor" title="Thanor">
-		</div>
-		<div class="khung">
-			<div class="bo">
-				<div class="di">
-					Thanor
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="cell">
-		<div class="anh" id ="Captain_Marvel">
-			<img src="img/cap_marvel.jpg" alt="Captain Marvel" title="Captain Marvel">
-		</div>
-		<div class="khung">
-			<div class="bo">
-				<div class="di">
-					Captain Marvel
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="cell">
-		<div class="anh" id ="Hulk">
-			<img src="img/hulk.jpg" alt="Hulk" title="Hulk">
-		</div>
-		<div class="khung">
-			<div class="bo">
-				<div class="di">
-					Hulk
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="cell">
-		<div class="anh" id ="Yon_Rogg">
-			<img src="img/yon.jpg" alt="Yon Rogg" title="Yon Rogg">
-		</div>
-		<div class="khung">
-			<div class="bo">
-				<div class="di">
-					Yon Rogg
-				</div>
-			</div>
-		</div>
-	</div>
+	
 </div>
-<audio autoplay="">
-	<source src="nhac/nhac.mp3" type=" audio/mpeg">	
-</audio>
-
 </body>
 </html>
