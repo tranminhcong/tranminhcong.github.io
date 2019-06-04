@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo java</title>
+	<script type="text/javascript">
+/*		function theky(x) { 
+    return Math.ceil(x/100); 
+}
+function binhphuong(x){
+  return( "Kết Quả: " + (x*x));
+}*/
+/*
+function mangnho(mang) {
+  mang.sort(function(a, b){return b-a});
+  return mang[0];
+}*/
+//- Bài 5. Viết 1 function lấy ra 1 số nhỏ nhất trong 1 mảng các số.
+
+function mangnho(mang) {
+  mang = mang.filter(function(a) {
+    if(isNaN(a))
+        return false;
+      else
+        return true;
+  }).sort(function(a, b) {
+    return a - b
+  });
+  
+    if(!mang.length) 
+    	return 'Khong co so nho nhat';
+    else
+        return mang[0];
+}
+//- Bài 6. Cho 1 mảng gồm tên của 5 học viên. Hãy viết function sắp xếp lại thứ tự các học viên theo bảng chữ cái và in ra màn hình danh sách học viên.
+function hoten (x) {
+	x.sort();
+	document.write(x.join("<br>"))
+}
+ //Bài 1. Cho 1 chuỗi số, hãy viết hàm có tác dụng sao chép chuỗi số lên 10 lần, ngăn cách nhau bởi ký tự "-". Ví dụ cho chuỗi "123" thì kết quả sẽ là "123-123-123-123-123-123-123-123-123-123"
+function lap (x){
+	var y = x;
+	for (var i = 1; i <= 9; i++)
+	  y = y + ("-"+ x);
+return y;
+}
+// Bài 2. Cho 1 số nguyên n. Viết hàm tính n giai thừa (n!). Ví dụ: n = 5, kết quả trả về là 5! = 1 * 2 * 3 * 4 * 5 = 120.
+function so(a)
+{
+    var tinh=1;
+    for (var i = 2; i <= a; i++)
+        tinh = tinh * i;
+    return tinh;
+}
+//Bài 3. Cho 1 chuỗi, hãy viết hàm đảo ngược chuỗi đó. Ví dụ cho chuỗi "hello" thì kết quả trả về sẽ là "olleh". Gợi ý: 1 chuỗi tương tự 1 mảng với mỗi phần tử là 1 ký tự trong chuỗi.
+ function Sstring(str){
+ 	if (str === "")
+ 		return "";
+ 	else
+ 		return Sstring(str.substr(1)) + (str.charAt(0));
+ }
+ //- Bài 4. Cho 1 mảng tên của n học viên. Viết function sắp xếp lại thứ tự các học viên theo bảng chữ cái và in ra màn hình danh sách học viên kèm theo số thứ tự (sử dụng document.write())
+function hoten(x) {
+  x.sort();
+  var result = '';
+  for (var i = 0; i < x.length; i++) {
+    result += i+". "+x[i]+"<br>"
+  }
+  return result;
+}
+
+document.write(hoten())
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
+var result = '', strCopy = '123';
+for(var i = 0; i < 10; i++) {
+	result += strCopy+((i == 9)?'':'-');
+}
