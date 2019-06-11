@@ -23,7 +23,7 @@ function mangnho(mang) {
       else
         return true;
   }).sort(function(a, b) {
-    return a - b
+    return b - a
   });
   
     if(!mang.length) 
@@ -68,7 +68,43 @@ function hoten(x) {
   return result;
 }
 
-document.write(hoten())
+document.write(hoten(["hiệp","khải","Tâm","Lâm","Anh"]))
+//Bài 5. Cho 1 mảng các số. Viết function tạo ra 1 mảng mới với các số là số dư tương ứng khi chia các số trong mảng cũ cho 2. Gợi ý: Để lấy số dư của 1 số cho 2 ta dùng toán tử %. Ví dụ: 5 % 2 = 1 (5 chia 2 dư 1).
+function mang(x) { 
+	return (x % 2)
+   }
+//- Bài 1. Sử dụng câu lệnh if để viết 1 hàm với 2 tham số bất kỳ, kiểm tra xem 2 tham số có phải là number không và tìm ra số lớn nhất trong 2 số đó.
+  function str(x,y){
+  	 if(isNaN(x,y))
+        return "Không phải number";
+     else if ( x > y)
+     	return " X lớn hơn Y";
+     else if (x < y)
+     	return "X nhỏ hơn Y";
+     else (x == y)
+     	return"X bằng Y"
+  }
+//- Bài 2. Viết 1 hàm dùng để tính giai thừa của 1 số. Kiểm tra tham số đầu vào phải là 1 số nguyên >= 0, sau đó tính giai thừa và in ra kết quả.
+function str(x){
+	if (x<0)
+		return "Không phải số nguyên dương";
+	else if (isNaN(x))
+		return "Không phải số nguyên dương";
+	else if (x == 0) 
+		return  "1";
+	else if (x > 0)
+		return x *str (x-1);
+}
+// Bài 3. Cho 1 mảng các số bất kỳ. Tạo ra 1 mảng mới chỉ chứa các số chẵn lấy ra từ mảng trên và sắp xếp theo thứ tự giảm dần.
+	function xstr(mang) {
+			var mangmoi=[];
+			for (var i = 0; i < mang.length; i++) {
+				if (mang[i] % 2 == 0)	
+				mangmoi.push(mang[i])
+			}
+			mangmoi.sort(function(a,b) { b - a});
+			return mangmoi							
+}
 
 </script>
 
@@ -77,7 +113,3 @@ document.write(hoten())
 
 </body>
 </html>
-var result = '', strCopy = '123';
-for(var i = 0; i < 10; i++) {
-	result += strCopy+((i == 9)?'':'-');
-}
