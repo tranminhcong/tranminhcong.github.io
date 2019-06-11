@@ -25,44 +25,24 @@ function ClickButton(obj){
 		str_ketqua = '';
 	}
 	var type = obj.innerHTML;
-	if(	type=='0' ||
-		type=='1' ||
-		type=='2' ||
-		type=='3' ||
-		type=='4' ||
-		type=='5' ||
-		type=='6' ||
-		type=='7' ||
-		type=='8' ||
-		type=='9' ||
-		type=='+/-' ||
-		type=='.')
-	{
+	if(	type=='0' ||type=='1' ||type=='2' ||type=='3' ||type=='4' ||type=='5' ||type=='6' ||type=='7' ||type=='8' ||type=='9' ||type=='+/-' ||type=='.'){
 		doi_phep_tinh = false;
 		if(type=='+/-'){
 			if(doi_dau){
 				doi_dau = false;
 				phim_moi = phim_moi.substring(1);
 			}
-			else
-			{
+			else{
 				doi_dau = true;			
 				phim_moi = '-' + phim_moi;
 			}
 		}
-		else
-		{
+		else{
 			phim_moi += type;
 		}
 		ketqua.value = str_ketqua + phim_moi;
 	}
-	else if(
-		type=='+' ||
-		type=='-' ||
-		type=='x' ||
-		type=='/'
-	)
-	{
+	else if(type=='+' ||type=='-' ||type=='x' ||type=='/'){
 		if(doi_phep_tinh){
 			if((phep_tinh_cu=='x' || phep_tinh_cu == '/') && (type == '+' || type == '-')){
 				uu_tien--;
@@ -88,8 +68,7 @@ function ClickButton(obj){
 		str_ketqua = '';
 		phim_moi = '';
 	}
-	else if(type == '=' || type == '%')
-	{		
+	else if(type == '=' || type == '%'){		
 		end	= true;
 		if(phim_moi!=''){
 			mang_so[mang_so_max_index] = parseFloat(phim_moi);
@@ -125,8 +104,7 @@ function ClickButton(obj){
       	else
         	ketqua.value = phim_moi * phim_moi * phim_moi;
 	}
-	else
-	{
+	else{
 		if(phim_moi.length > 1){
 			phim_moi = phim_moi.substring(0, phim_moi.length-1);
 		}else{
@@ -166,8 +144,7 @@ function GetValue(){
 				{
 					ketqua.value = "0";
 				}
-				else
-				{
+				else{
 					kqt = sh1 /  sh2;
 				}
 				mang_so[index] = kqt;
