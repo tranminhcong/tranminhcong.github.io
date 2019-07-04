@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Table</title>
+</head>
+
+<body>
+    <h1>Bảng giá sản phẩm</h1>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="header">Ảnh sản phẩm</th>
+                    <th class="header" data-column="name" data-order="asc" onclick="sortColumn(this)">
+                        Tên sản phẩm <i class="fa fa-sort"></i>
+                    </th>
+                    <th class="header" data-column="id" data-order="asc" onclick="sortColumn(this)">
+                        Mã sản phẩm <i class="fa fa-sort"></i>
+                    </th>
+                    <th class="header" data-column="price" data-order="asc" onclick="sortColumn(this)">
+                        Giá tiền <i class="fa fa-sort"></i>
+                    </th>
+                    <th class="header" data-column="quantity" data-order="asc" onclick="sortColumn(this)">
+                        Số lượng <i class="fa fa-sort"></i>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody id="products"></tbody>
+        </table>
+    </div>
+
+    <div class="total-price">
+        Tổng giá sản phẩm: <span id="total-price">0</span>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

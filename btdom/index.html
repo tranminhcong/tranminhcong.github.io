@@ -1,97 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>demo</title>
-	<meta charset="utf-8">
-	<style type="text/css">
-		*{
-			margin: 10px;
-			padding: 0;
-		}
-		body{
-			font-size: 16px;
-			font-family: roboto-regular;
-		}
-		.box{
-			padding: 15px;
-			border: 5px solid black;
-			background: white;
-		}
-		h1{
-			display: block;
-    		text-align: center;
-		}
-		p{
-			text-align: justify;
-			text-indent: 20px; 
-		}
-	</style>
-</head>
-<body>
-	<div id ="arry">
-		<h1>Thor</h1>
-		<div class="box">
-			<p id="p1" class="paragraph">Năm 965 sau Công nguyên, Odin (Anthony Hopkins), vị vua xứ Asgard, phát động chiến tranh chống bọn người khổng lồ băng (Frost Giants) xứ Jotunheim và cầm đầu bọn chúng là Laufey (Colm Feore), để ngăn ngừa việc chúng thống trị Chín Vương Quốc (Nine Realms), bắt đầu là Trái Đất. Lực lượng Asgard đã đánh bại lũ khổng lồ và tịch thu nguồn năng lượng của chúng là Chiếc tráp mùa đông vĩnh cửu (Casket of Ancient Winters), mặc dù Odin mất mắt phải trong cuộc chiến này.</p>
-			<p id="p2" class="paragraph">Trong hiện tại, con trai của Odin là Thor (Chris Hemsworth) được vua cha trao chiếc búa Mjolnir, đang chuẩn bị kế vị ngai vàng trị vì Asgard, thì phải bỏ dở vì bọn khổng lồ đột nhập định lấy lại cái tráp, tuy những tên trộm đã bị tiêu diệt ngay bởi Kẻ hủy diệt (the Destroyer) - bộ giáp rỗng làm nhiệm vụ canh gác kho tàng. Mặc cho Odin ngăn cấm, Thor cùng em trai Loki (Tom Hiddleston), người bạn thời thơ ấu Sif (Jaimie Alexander) và bộ ba chiến binh (Volstagg (Ray Stevenson) - Fandral (Joshua Dallas) - Hogun (Tadanobu Asano) tìm đến Jotunheim gây hấn với Laufey. Một trận chiến nảy lửa diễn ra đến khi Odin xuất hiện và can thiệp để giải cứu các chiến binh Asgard, kết thúc sự hòa bình tạm thời giữa hai bên. Sau khi trở về Asgard, Odin trừng phạt con trai mình bằng cách tước bỏ sức mạnh của Thor và đày con xuống Trái Đất. Ông ném Mjolnir — vũ khí của Thor cũng xuống Trái Đất, sau khi yểm bùa chỉ cho phép người có tư cách xứng đáng sử dụng nó.</p>
-			<p id="p3" class="paragraph">Thor rơi xuống New Mexico, nhà nghiên cứu vật lý học thiên thể Jane Foster (Natalie Portman), trợ tá Darcy Lewis (Kat Dennings) và tiến sĩ Erik Selvig (Stellan Skarsgård) phát hiện ra ông. Còn những người dân địa phương tìm thấy chiếc búa Mjolnir, sau đó bị một nhân viên của tổ chức SHIELD là Phil Coulson (Clark Gregg) trưng dụng cho quân đội, mặc dù không ai lấy nổi chiếc búa. Rồi Phil tước đoạt những dữ liệu của Jane về lỗ sâu đã đưa Thor tới Trái Đất. Thor khi biết được chiếc búa Mjolnir ở đâu, đã tìm đến nơi đó để lấy lại, nhưng Thor cũng không nhấc nổi chiếc búa và bị bắt giữ. Nhờ tiến sĩ Selvig, Thor được tự do và ở lại Trái Đất vì đã phải lòng Jane.</p>			
-		</div>		
-	</div>
-	<script type="text/javascript">
-		//bài 1
-		function change_color()
-            {
-               document.getElementById("p1").style.color = 'blue';
-               document.getElementById("p2").style.color = 'yellow';
-               document.getElementById("p3").style.color = 'red';
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script language="javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+        <script language="javascript">
+            function load_ajax(){
+                $.ajax({
+                    url : "result.php",
+                    type : "post",
+                    dataType:"text",
+                    data : {
+                         
+                    },
+                    success : function (result){
+                        $('#result').html(result);
+                    }
+                });
             }
-            change_color();
-        // bài 2
-        function changeBgColor()
-            {
-               document.body.style.background = 'red';
-            }
-            changeBgColor();
-        //bài 3
-        function copyContent(paragraph1, paragraph2)
-        	{
-        		var paragraph1 = document.getElementById('p1');
-  				var paragraph2 = document.getElementById("p2");
-  				paragraph1.innerHTML=paragraph2.innerHTML;
-        	}
-        	copyContent();
-        //bài 4
-        function changefontsize()
-            {
-               document.body.style.fontSize = '17px';
-            }
-            changefontsize();
-      //bài 5
-       function increaseFontSize()
-        	{
-        		var size = document.body.style.fontSize;
-        		 if ( size <30) {
-        		 	size++;
-        		 }
-        		 else ( size>=30){
-        		 	size;
-        		 }
-          	}
-          	increaseFontSize()
-        	{
-        //bài 6
- function increaseFontSize()
-        	{
-        		var size = body.style.fontSize;
-        		 if ( size >10) {
-        		 	size--;
-        		 }
-        		 else ( size < 10){
-        		 	size;
-        		 }
-          	}
-          	increaseFontSize()
-        	{
-      /* Bài 5, bài 6  :)) không chạy dc nha thầy */
-	</script>
-</body>
+        </script>
+    </head>
+    <body>
+        <div id="result">
+            Nội dung ajax sẽ được load ở đây
+        </div>
+        <input type="button" name="clickme" id="clickme" onclick="load_ajax()" value="Click Me"/>
+    </body>
 </html>
