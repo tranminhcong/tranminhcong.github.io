@@ -44,6 +44,23 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
+    <script>
+            function load_ajax(){
+                $.ajax({
+                    url : "products.html",
+                    type : "post",
+                    dataType:"text",
+                    data : {
+                         
+                    },
+                    success : function (products){
+                        $('#products').html(products);
+                    }
+                });
+            }
+            load_ajax();
+    </script>
+
 </body>
 
 </html>
