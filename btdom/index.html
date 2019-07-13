@@ -7,7 +7,7 @@
         <script language="javascript">
             function load_ajax(){
                 $.ajax({
-                    url : "result.php",
+                    url : "result.html",
                     type : "post",
                     dataType:"text",
                     data : {
@@ -18,11 +18,12 @@
                     }
                 });
             }
+            load_ajax();
         </script>
     </head>
     <body>
         <div id="result">
-            Nội dung ajax sẽ được load ở đây
+            
         </div>
         <input type="button" name="clickme" id="clickme" onclick="load_ajax()" value="Click Me"/>
     </body>

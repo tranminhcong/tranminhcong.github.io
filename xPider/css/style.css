@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'aileronregular';
+    src: url('fonts/aileron-regular-webfont.woff2') format('woff2'),
+         url('fonts/aileron-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aileronbold';
+    src: url('fonts/aileron-bold-webfont.woff2') format('woff2'),
+         url('fonts/aileron-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aileronblack';
+    src: url('fonts/aileron-black-webfont.woff2') format('woff2'),
+         url('fonts/aileron-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aileronsemibold';
+    src: url('fonts/aileron-semibold-webfont.woff2') format('woff2'),
+         url('fonts/aileron-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aileronlight_italic';
+    src: url('fonts/aileron-lightitalic-webfont.woff2') format('woff2'),
+         url('fonts/aileron-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html, body  {
+    font-family: aileronregular;
+    color: #FFFFFF;
+    font-size: 17px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #E7EAEE;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #FFFFFF;
+}
+.btn-outline-success {
+    background-color: #FFFFFF;
+    color: #2F5BEA;
+    border-color: #FFFFFF;
+}
+.btn-outline-success:hover {
+    color: #ffffff;
+    background-color: #2F5BEA;
+    border-color: #2F5BEA;
+}
+.hs-item {
+    height: 919px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+}

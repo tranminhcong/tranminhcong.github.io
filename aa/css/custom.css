@@ -1,0 +1,102 @@
+/*
+*  theme overwrite 
+=================================
+=================================
+=================================*/
+/**! ----- font family ---- **/
+
+@font-face {
+    font-family: 'helveticabold';
+    src: url('font/helvetica_bold-webfont.woff2') format('woff2'),
+         url('font/helvetica_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'helveticaregular';
+    src: url('font/helvetica-webfont.woff2') format('woff2'),
+         url('font/helvetica-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sf_pro_textsemibold';
+    src: url('font/sfprotext-semibold-webfont.woff2') format('woff2'),
+         url('font/sfprotext-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'helveticaregular';
+    src: url('font/helvetica-webfont.woff2') format('woff2'),
+         url('font/helvetica-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+body {
+  font-family: "helveticaregular", sans-serif, "helveticaregular", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+ {
+  font-family: "helveticabold",
+}
+
+.blockquote {
+  font-family: "Noto Serif", serif;
+}
+
+/**! ----- colors ---- **/
+.bg-color-primary, .btn--bg-primary, .navbar-sticky--on .btn, .btn--bg-grey:hover, .btn--outline:hover, .btn--outline-thick:hover, .btn-border-hover.btn--color-white:before, .card--focused, .card--outline:hover, .card--outline:focus, .social-lists li a:hover, .media-player-icon--fill-primary, .oval, .slick-active .slick-dots--long, .pagination .page-item.active .page-link {
+  background: #2f5bea;
+}
+
+.color-primary, .hero-content .btn:hover .media-player-icon--fill-grey, .btn--bg-white:hover, .btn--color-primary, .btn--color-primary:hover, .btn--color-dark.btn-text-hover:hover, .btn--outline.btn--color-primary, .btn--outline-thick.btn--color-primary, .btn-text-hover:hover, .card--focused .btn__text, .lang-selector .lang-dropdown__item:focus, .lang-selector .lang-dropdown__item:hover, .icon-rounded .icon, .media-player-icon--fill-grey:hover, .btn:hover .media-player-icon--fill-grey i, .pagination .page-item .page-link:hover, .dropdown-item:focus, .dropdown-item:hover, .dropdown-item.active, .dropdown-item:active, .features--slider-2 .slick-arrow:hover i, .footer-widget ul li a:hover, .footer .nav li a:hover {
+  color: #2f5bea;
+}
+
+.features .swipe-tab.active-tab .swipe-tab__inner {
+  -webkit-box-shadow: 0px 2px 0px #2f5bea;
+          box-shadow: 0px 2px 0px #2f5bea;
+}
+
+.border-primary, .hr--blod, .btn--color-primary, .btn--color-dark.btn-text-hover:hover, .btn--outline:hover, .btn--outline-thick:hover, .btn-text-hover:hover {
+  border-color: #2f5bea;
+}
+.bg-fill-primary {
+  fill: #2f5bea;
+}
+h6{
+
+  font-family:   'helveticabold';
+
+  color: #E2689A;
+  font-size: 18px;
+
+}
+/*! Place your custom styles here (below). 
+      This will make it much easier to update the template later - you'll only need to preserve "this file
+  ===================================================================================================*/
