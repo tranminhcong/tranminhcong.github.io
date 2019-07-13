@@ -1,0 +1,38 @@
+ [
+  {
+    'id': 'MS001',
+    'name': 'Điện thoại Nokia 105 Single Sim (2017)',
+    'price': 327000,
+    'quantity': 1,
+    'img': 'img1.jpg'
+  },
+  {
+    'id': 'MS002',
+    'name': 'Điện Thoại Nokia 8110 4G',
+    'price': 660000,
+    'quantity': 3,
+    'img': 'img2.jpg'
+  },
+  {
+    'id': 'MS003',
+    'name': 'Điện Thoại Nokia 106 Dual Sim',
+    'price': 368000,
+    'quantity': 2,
+    'img': 'img3.jpg'
+  },
+  {
+    'id': 'MS004',
+    'name': 'Điện Thoại Nokia 150 Dual Sim',
+    'price': 589000,
+    'quantity': 4,
+    'img': 'img4.jpg'
+  },
+  {
+    'id': 'MS005',
+    'name': 'Điện thoại Nokia 3310 Dual Sim',
+    'price': 890000,
+    'quantity': 5,
+    'img': 'img5.jpg'
+  }
+]
+
