@@ -5348,7 +5348,7 @@ function backupads(a) {
     d.charset = "utf-8";
     d.src = "//jsc.mgid.com/t/r/truyenfull.vn.335705.js?t=" + a.getYear() + a.getMonth() + a.getUTCDate() + a.getUTCHours();
     f.appendChild(d)
-  }()) : (outbrain_check = 1, postscribe(a, '<div class="OUTBRAIN" data-src="https://truyenfull.vn/' + b + '/" data-widget-id="GS_1" data-ob-template="Truyenfull.vn"></div> <script type="text/javascript" async="async" src="//widgets.outbrain.com/outbrain.js">\x3c/script>'), setTimeout(function() {
+  }()) : (outbrain_check = 1, postscribe(a, '<div class="OUTBRAIN" data-src="#' + b + '/" data-widget-id="GS_1" data-ob-template="#"></div> <script type="text/javascript" async="async" src="//widgets.outbrain.com/outbrain.js">\x3c/script>'), setTimeout(function() {
     outbrain_backup_mobile(a, "chapter")
   }, 5E3))
 }
