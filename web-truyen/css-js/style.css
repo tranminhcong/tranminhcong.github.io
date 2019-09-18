@@ -1380,3 +1380,13 @@
         max-width: 240px
       }
     }
+    .logo-web {
+    display: block;
+    width: 196px;
+    height: 36px;
+    background: url(//tranminhcong.github.io/web-truyen/img/web-logo.png) no-repeat 0 0;
+    text-indent: -9999px;
+    white-space: nowrap;
+    outline: none;
+    margin: 5px 5px 0 0;
+}
