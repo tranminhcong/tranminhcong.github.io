@@ -4757,70 +4757,18 @@ function PasswordValidate(b) {
 }
 var googletag = googletag || {};
 
-function check_url() {
-  window.location.hostname && -1 === window.location.hostname.indexOf("truyenfull.vn") && (window.location.href = "https://truyenfull.vn")
-}
-
 function quick_search(b) {
-  $.get("/ajax.php", {
-    type: "quick_search",
-    str: b
-  }).done(function(b) {
-    $(".list-search-res").html(b)
-  })
 }
 
 function load_comment(b, c, d) {
-  $("#" + b).html('<div class="fb-comments" data-href="http://truyenfull.vn/' + c + '/" data-width="100%" width="100%" data-numposts="5" data-colorscheme="' + d + '"></div>');
+  $("#" + b).html('<div class="fb-comments" data-href="http://localhost/' + c + '/" data-width="100%" width="100%" data-numposts="5" data-colorscheme="' + d + '"></div>');
   if ("undefined" !== typeof FB) FB.XFBML.parse(document.getElementById(b));
   else var e = setInterval(function() {
     "undefined" !== typeof FB && (FB.XFBML.parse(document.getElementById(b)), clearInterval(e))
   }, 100)
 }
 
-function outbrain_backup(b) {
-  var c = $("#" + b).html();
-  if (-1 === c.indexOf("https://paid.outbrain.com") && -1 === c.indexOf("data-video-id") && -1 === c.indexOf("ob-video-duration")) {
-    $("#" + b).html('\x3c!-- Composite Start --\x3e<div id="M182108ScriptRootC338407"><div id="M182108PreloadC338407"></div></div>\x3c!-- Composite End --\x3e');
-    b = new Date;
-    c = document;
-    var d = c.createElement("iframe");
-    d.style.display = "none";
-    c.getElementById("M182108ScriptRootC338407").appendChild(d);
-    try {
-      var e = d.contentWindow.document;
-      e.open();
-      e.writeln("<html><body></body></html>");
-      e.close();
-      var f = e.body
-    } catch (h) {
-      e = c, f = c.getElementById("M182108ScriptRootC338407")
-    }
-    c = e.createElement("div");
-    c.id = "MG_ID";
-    c.style.display = "none";
-    c.innerHTML = 338407;
-    f.appendChild(c);
-    e = e.createElement("script");
-    e.async = "async";
-    e.defer = "defer";
-    e.charset = "utf-8";
-    e.src = "//jsc.mgid.com/t/r/truyenfull.vn.338407.js?t=" + b.getYear() + b.getMonth() + b.getUTCDate() + b.getUTCHours();
-    f.appendChild(e)
-  }
-}
-
 function update_views(b, c) {
-  $.post("/ajax.php", {
-    type: "update_views",
-    tid: b,
-    add: c,
-    t: (new Date).getTime()
-  })
-}
-
-function ads_reset() {
-  $("#ads-780-90-chapter-1, #ads-780-90-chapter-2, #ads-320-100-backup-2").html("")
 }
 
 function nextNode_remove(b) {
@@ -4829,28 +4777,7 @@ function nextNode_remove(b) {
   $("div#" + b).prev("br").remove()
 }
 
-function desktop_ads_load(b, c, d) {
-  if (2E3 <= $(".chapter-c").html().length) {
-    var e = $(".chapter-c").find("p, br, img, table"),
-      f = parseInt(e.length / 3);
-    e.eq(f).after('<div class="hidden-xs text-center ads-middle ads-holder" id="ads-780-90-chapter-3"><div id="vdo_player"></div></div>');
-    postscribe("#vdo_player", '<div id="vdo_ai_div"></div><script>(function(v,d,o,ai){ai=d.createElement("script");ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, "//a.vdo.ai/core/truyenfull/vdo.ai.js?vdo=34");\x3c/script></div>');
-    nextNode_remove("ads-780-90-chapter-3");
-    f = parseInt(2 * f);
-    e.eq(f).after('<div class="hidden-xs text-center ads-middle ads-holder" id="ads-780-90-chapter-4"><div id="bg_125121827"></div></div>');
-    $.getScript("//vn-platform.bidgear.com/async.php?domainid=1251&sizeid=2&zoneid=1827&k=5b030c2ec8fde");
-    nextNode_remove("ads-780-90-chapter-4");
-    $(".ads-middle").css("padding-top", "30px")
-  }
-  1 != d ? (d = (new Date).getHours(), d = 0 <= d && 7 >= d ? "x7dnq24 x7dnq26 x7dnq0l x7dnq11 x7dnpz9 x7dnq1f x7dnrgj x7dnrci x7dnrea x7dnq08 x7dnq5a x7dnq7h x7dnq0v x757k0s x75cq0c x758x7h".split(" ") : 8 <= d && 15 >= d ? "x7dhrre x7dhrpo x7dhrvn x7dhrqo x7dhrsc x7dhro0 x7dhrf7 x7dhrcf x7dhrc1 x7dhrva x7dhrqw x7dhrfb x7dhrc9 x7dhrbz x7dhrbn x7dhrqu x7dhrl5 x7dhrdr x7dhrkn x7dejjx x7dejd9 x7dej2f x7d9fbm x7d9ezz x7d9dyk".split(" ") : "x7euk69 x7euk6a x7excoj x7ewmtz x7ewmtx x7ewmtv x7ewmtt x7ewmtu x7ewmts x7eul8y x7eqbvh x7eul8w x7cmhhg x7dkvuy x7dkvvi x7dkvtv x7dkvtc x7dkvwf x7dkvwe x7dkvu4 x7dkvv8 x7dkvtw".split(" "), $("#ads-780-90-chapter-1").html('<iframe frameborder="0" width="480" height="270" src="//www.dailymotion.com/embed/video/' +
-    d[randomso(0, d.length - 1)] + '?autoplay-mute=1&mute=1" allowfullscreen="" allow="autoplay"></iframe>')) : postscribe("#ads-780-90-chapter-1", '<div id="adtrue_tag_8699"></div><script src="//cdn.adtrue.com/rtb/async.js">\x3c/script><script>var adtrue_tags = window.adtrue_tags || [];adtrue_tags.push({tag_id: 8699,width: 300,height: 250    });\x3c/script>');
-  postscribe("#ads-780-90-chapter-2", '<div class="OUTBRAIN" data-src="' + b + "/" + c + '/" data-widget-id="GS_1" data-ob-template="Truyenfull.vn"></div> <script type="text/javascript" async="async" src="//widgets.outbrain.com/outbrain.js">\x3c/script>');
-  setTimeout(function() {
-    outbrain_backup("ads-780-90-chapter-2")
-  }, 5E3)
-}
 $(document).ready(function() {
-  check_url();
   if ($("body").is("#body_home")) {
     var b = $("#intro-index").width(),
       c = $("#intro-index").height(),
@@ -4950,15 +4877,15 @@ $(document).ready(function() {
       var a = this.value;
       "hatsan" == a ? ($("body").css({
         "background-color": "#f2f2f2",
-        "background-image": "url('//cdnaz.truyenfull.vn/img/bg_op.png')",
+        "background-image": "url('/img/bg_op.png')",
         "background-repeat": "repeat"
       }).removeClass("dark-background"), $(".footer").removeClass("footer-dark"), m = "light") : "sachcu" == a ? ($("body").css({
         "background-color": "#c2b49b",
-        "background-image": "url('//cdnaz.truyenfull.vn/img/bg_book_op.png')",
+        "background-image": "url('/img/bg_book_op.png')",
         "background-repeat": "repeat"
       }).removeClass("dark-background"), $(".footer").removeClass("footer-dark"), m = "light") : "#232323" == a ? ($("body").css({
         "background-color": a,
-        "background-image": "url('//cdnaz.truyenfull.vn/img/bg_dark.gif')"
+        "background-image": "url('/img/bg_dark.gif')"
       }).addClass("dark-background"), $(".footer").addClass("footer-dark"), m = "dark") : ($("body").css({
         "background-color": a,
         "background-image": "none"
@@ -5061,7 +4988,7 @@ $(document).ready(function() {
     var a = "";
     clearTimeout(p);
     a = $(this).val();
-    0 == a.length ? $(".list-search-res").html("").addClass("hide") : 3 <= a.length && ($(".list-search-res").html('<img src="//cdnaz.truyenfull.vn/img/loading-search.gif" alt="loading">').removeClass("hide"), p = setTimeout(function() {
+    0 == a.length ? $(".list-search-res").html("").addClass("hide") : 3 <= a.length && ($(".list-search-res").html('<img src="/img/loading-search.gif" alt="loading">').removeClass("hide"), p = setTimeout(function() {
       quick_search(a)
     }, 500))
   });
@@ -5070,7 +4997,7 @@ $(document).ready(function() {
     var a = this;
     setTimeout(function() {
       var b = $(a).val();
-      0 == b.length ? $(".list-search-res").html("").addClass("hide") : 3 <= b.length && ($(".list-search-res").html('<img src="//cdnaz.truyenfull.vn/img/loading-search.gif" alt="loading">').removeClass("hide"), p = setTimeout(function() {
+      0 == b.length ? $(".list-search-res").html("").addClass("hide") : 3 <= b.length && ($(".list-search-res").html('<img src="/img/loading-search.gif" alt="loading">').removeClass("hide"), p = setTimeout(function() {
         quick_search(b)
       }, 500))
     }, 0)
@@ -5118,29 +5045,7 @@ $(document).ready(function() {
       ListChapProcess(b, f, c, a.page_list, a.chap_list)
     })
   });
-  $("#list-chapter").on("click", ".pagination li a", function(a) {
-    var b = $(this).attr("href");
-    if ("javascript:void(0)" != b) {
-      a.preventDefault();
-      var c = $("h1").text();
-      a = $("#total-page").val();
-      if (b == "https://truyenfull.vn/" + f + "/#list-chapter") d = 1;
-      else {
-        var d = b.match(/(\d+)(?!.*\d)/);
-        d = d[1]
-      }
-      $.get("/ajax.php", {
-        type: "list_chapter",
-        tid: g,
-        tascii: f,
-        tname: c,
-        page: d,
-        totalp: a
-      }).done(function(a) {
-        ListChapProcess(c, f, d, a.page_list, a.chap_list)
-      })
-    }
-  });
+  $("#list-chapter").on("click", ".pagination li a", function(a) {});
   if ($("#body_home").length) {
     var q = function() {
       $("#hot-select option:selected").next().val() ? $("#hot-select option:selected").prop("selected", !1).next().prop("selected", !0) : ($("#hot-select option:selected").prop("selected", !1), $("#hot-select option:eq(0)").prop("selected", !0));
@@ -5199,30 +5104,11 @@ $(document).ready(function() {
     if (!a || !c || !d) return FormError("B\u1ea1n vui l\u00f2ng \u0111i\u1ec1n \u0111\u1ee7 th\u00f4ng tin li\u00ean h\u1ec7.", "contact-container"), !1;
     FormDisable(".single-page-form");
     FormSuccess('<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Ch\u1edd t\u00ed / Please wait...', "contact-container");
-    $.post("/ajax.php", {
-      type: "contact",
-      name: a,
-      email: b,
-      subject: c,
-      message: d,
-      secure: e
-    }).done(function(a) {
-      FormEnable(".single-page-form");
-      "success" == a.status ? (FormSuccess("B\u1ea1n \u0111\u00e3 g\u1eedi n\u1ed9i dung li\u00ean h\u1ec7 th\u00e0nh c\u00f4ng! / Your message was sent successfully!", "contact-container"), $("#contact-form").trigger("reset"), $("#contact-secure").val(a.token)) : FormError("G\u1eedi n\u1ed9i dung li\u00ean h\u1ec7 th\u1ea5t b\u1ea1i, b\u1ea1n vui l\u00f2ng th\u1eed l\u1ea1i sau ho\u1eb7c g\u1eedi email tr\u1ef1c ti\u1ebfp \u0111\u1ebfn contact@truyenfull.vn / Error, please try again later or send email directly to contact@truyenfull.vn", "contact-container")
-    })
+    FormSuccess("B\u1ea1n \u0111\u00e3 g\u1eedi n\u1ed9i dung li\u00ean h\u1ec7 th\u00e0nh c\u00f4ng! / Your message was sent successfully!", "contact-container")
+    $("#contact-form").trigger("reset")
   });
-  $(".pagination-container").on("submit", "#page_jump", function(a) {
-    a.preventDefault();
-    a = $("input[name='page_type']").val();
-    var b = $("input[name='page']").val(),
-      c = $("input[name='filter']").val();
-    a ? isNumber(b) && 0 === b % 1 && (window.location.href = "https://truyenfull.vn/" + a + "/" + f + c + "/trang-" + b + "/") : isNumber(b) && 0 === b % 1 && (window.location.href = "https://truyenfull.vn/" + f + "/trang-" + b + "/#list-chapter")
-  });
-  $("#chapter-nav-top, #chapter-nav-bot").on("change", ".chapter_jump", function() {
-    $("option:selected", this);
-    var a = this.value;
-    a && h && (window.location.href = "https://truyenfull.vn/" + h + "/" + a + "/")
-  });
+  $(".pagination-container").on("submit", "#page_jump", function(a) {});
+  $("#chapter-nav-top, #chapter-nav-bot").on("change", ".chapter_jump", function() {});
   $("#truyen").on("click", ".showmore .btn", function(a) {
     a.preventDefault();
     $(".desc-text").css("height", "auto");
@@ -5231,7 +5117,7 @@ $(document).ready(function() {
   });
   $(".rate-holder").raty({
     number: 10,
-    path: "//cdnaz.truyenfull.vn/lib/raty/images",
+    path: "img",
     noRatedMsg: "\u0110\u00e3 \u0111\u00e1nh gi\u00e1",
     hints: "Kh\u00f4ng c\u00f2n g\u00ec \u0111\u1ec3 n\u00f3i...;WTF;C\u00e1i g\u00ec th\u1ebf n\u00e0y ?!;Haizz;T\u1ea1m;C\u0169ng \u0111\u01b0\u1ee3c;Kh\u00e1 \u0111\u1ea5y;\u0110\u01b0\u1ee3c;Hay;Tuy\u1ec7t \u0111\u1ec9nh!".split(";"),
     target: ".rate-text",
@@ -5240,11 +5126,6 @@ $(document).ready(function() {
     },
     click: function(a) {
       $(".rate-holder").raty("readOnly", !0);
-      $.post("/ajax.php", {
-        type: "rate",
-        data: a,
-        id: g
-      });
       localStorage.setItem(g, "rated");
       alert("C\u1ea3m \u01a1n b\u1ea1n \u0111\u00e3 \u0111\u00e1nh gi\u00e1 truy\u1ec7n!")
     },
@@ -5270,158 +5151,4 @@ $(document).ready(function() {
       z()
     })
   }
-  $.browser.mobile ? ($(".col-truyen-main").addClass("no-hover"), $(".desktop-ads").attr("style", "display: none!important"), $(".w320").attr("style", "display: block!important")) : ($("body").is("#body_truyen") && (postscribe("#ads-780-90-story-1", '<div id="adtrue_tag_8698"></div><script src="//cdn.adtrue.com/rtb/async.js">\x3c/script><script>var adtrue_tags = window.adtrue_tags || [];adtrue_tags.push({tag_id: 8698,width: 728,height: 90    });\x3c/script>'), postscribe("#story-ads-300-250-top", '<div id="adtrue_tag_8699"></div><script src="//cdn.adtrue.com/rtb/async.js">\x3c/script><script>var adtrue_tags = window.adtrue_tags || [];adtrue_tags.push({tag_id: 8699,width: 300,height: 250    });\x3c/script>'), postscribe("#story-ads-300-250", '<div id="adtrue_tag_8699"></div><script src="//cdn.adtrue.com/rtb/async.js">\x3c/script><script>var adtrue_tags = window.adtrue_tags || [];adtrue_tags.push({tag_id: 8699,width: 300,height: 250    });\x3c/script>')), h && desktop_ads_load("https://truyenfull.vn", h, y), setInterval(function() {
-    $(".ads-frame").is(":focus") && $(window).focus()
-  }, 500))
-});;
-(function(i, s, o, g, r, a, m) {
-  i['GoogleAnalyticsObject'] = r;
-  i[r] = i[r] || function() {
-    (i[r].q = i[r].q || []).push(arguments)
-  }, i[r].l = 1 * new Date();
-  a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-  a.async = 1;
-  a.src = g;
-  m.parentNode.insertBefore(a, m)
-})(window, document, 'script', '//cdnaz.truyenfull.vn/js/analytics.js', 'ga');
-ga('create', 'UA-34734851-18', 'auto');
-ga('send', 'pageview');;
-var outbrain_check;
-
-function outbrain_backup_mobile(a) {
-  var b = $(a).html(); - 1 === b.indexOf("https://paid.outbrain.com") && -1 === b.indexOf("data-video-id") && -1 === b.indexOf("ob-video-duration") && backupads(a)
-}
-
-function backupads(a) {
-  var b = $("#ten-truyen").val();
-  b || (b = $("#truyen-ascii").val());
-  $(a).html("");
-  outbrain_check ? "#ads-320-100-backup-3" == a ? ($(a).html('\x3c!-- Composite Start --\x3e<div id="M182108ScriptRootC335704"><div id="M182108PreloadC335704"></div></div>\x3c!-- Composite End --\x3e'), function() {
-    var a = new Date,
-      e = document,
-      b = e.createElement("iframe");
-    b.style.display = "none";
-    e.getElementById("M182108ScriptRootC335704").appendChild(b);
-    try {
-      var d = b.contentWindow.document;
-      d.open();
-      d.writeln("<html><body></body></html>");
-      d.close();
-      var f = d.body
-    } catch (h) {
-      d = e, f = e.getElementById("M182108ScriptRootC335704")
-    }
-    e = d.createElement("div");
-    e.id = "MG_ID";
-    e.style.display = "none";
-    e.innerHTML = 335704;
-    f.appendChild(e);
-    d = d.createElement("script");
-    d.async = "async";
-    d.defer = "defer";
-    d.charset = "utf-8";
-    d.src = "//jsc.mgid.com/t/r/truyenfull.vn.335704.js?t=" + a.getYear() + a.getMonth() + a.getUTCDate() + a.getUTCHours();
-    f.appendChild(d)
-  }()) : "#ads-320-100-backup-4" == a ? ($(a).html('<div class="fb-middle"><div id="bg_125171828"></div></div>'), $.getScript("//vn-platform.bidgear.com/async.php?domainid=1251&sizeid=7&zoneid=1828&k=5b030cc1eb85d")) : ($(a).html('\x3c!-- Composite Start --\x3e<div id="M182108ScriptRootC335705"><div id="M182108PreloadC335705"></div></div>\x3c!-- Composite End --\x3e'), function() {
-    var a = new Date,
-      b = document,
-      g = b.createElement("iframe");
-    g.style.display = "none";
-    b.getElementById("M182108ScriptRootC335705").appendChild(g);
-    try {
-      var d = g.contentWindow.document;
-      d.open();
-      d.writeln("<html><body></body></html>");
-      d.close();
-      var f = d.body
-    } catch (h) {
-      d = b, f = b.getElementById("M182108ScriptRootC335705")
-    }
-    b = d.createElement("div");
-    b.id = "MG_ID";
-    b.style.display = "none";
-    b.innerHTML = 335705;
-    f.appendChild(b);
-    d = d.createElement("script");
-    d.async = "async";
-    d.defer = "defer";
-    d.charset = "utf-8";
-    d.src = "//jsc.mgid.com/t/r/truyenfull.vn.335705.js?t=" + a.getYear() + a.getMonth() + a.getUTCDate() + a.getUTCHours();
-    f.appendChild(d)
-  }()) : (outbrain_check = 1, postscribe(a, '<div class="OUTBRAIN" data-src="https://truyenfull.vn/' + b + '/" data-widget-id="GS_1" data-ob-template="Truyenfull.vn"></div> <script type="text/javascript" async="async" src="//widgets.outbrain.com/outbrain.js">\x3c/script>'), setTimeout(function() {
-    outbrain_backup_mobile(a, "chapter")
-  }, 5E3))
-}
-
-function check_frame(a, b, c) {
-  -1 !== c.indexOf("fw") ? "Error" == $("#" + c).contents().find("#" + c + "_error").text() && (fanads_backup_check(b, c), clearInterval(a)) : "Error" == $("#" + c).contents().find("#" + c + "_error").text() && (fanads_backup_check_2(b, c), clearInterval(a))
-}
-
-function check_interval(a, b, c, e) {
-  var g = 0;
-  b = setInterval(function() {
-    20 === g ? ("check" == a && (-1 !== e.indexOf("fw") ? fanads_backup_check(c, e) : fanads_backup_check_2(c, e)), clearInterval(b)) : fanads_check(a, b, c, e);
-    g++
-  }, 200)
-}
-
-function fanads_check(a, b, c, e) {
-  "checkwidth" == a ? $("#" + e + " iframe").contents().find("html").html() && "300px" == $("#" + e + " iframe").css("width") && ($("#" + c + " > .fb-middle").attr("style", "display: block; width: 302px; overflow: visible"), $("#" + c + " > .fb-middle > .fbsp").css({
-    border: "1px solid #ced0d4",
-    "border-bottom": "0",
-    width: "302px"
-  }), $("#" + c + " > .fb-middle > #" + e).css({
-    border: "1px solid #ced0d4",
-    "line-height": "1px"
-  }), clearInterval(b)) : check_frame(b, c, e)
-}
-
-function fanads_backup_check_2(a, b) {
-  -1 !== b.indexOf("chapter") ? "ads-320-100-backup-5" == a ? $("#fanads_chapter_1").contents().find(".fbAdLoaded").length || $("#fanads_chapter_1").contents().find(".fbANRoot").length || $("#" + a).remove() : "ads-320-100-backup-6" == a ? $("#fanads_chapter_2").contents().find(".fbAdLoaded").length || $("#fanads_chapter_2").contents().find(".fbANRoot").length || $("#" + a).remove() : $("#fanads_chapter_3").contents().find(".fbAdLoaded").length || $("#fanads_chapter_3").contents().find(".fbANRoot").length || $("#" + a).remove() : $("#fanads_story_1").contents().find(".fbAdLoaded").length || $("#fanads_story_1").contents().find(".fbANRoot").length || backupads("#" + a)
-}
-
-function fanads_backup_check(a, b) {
-  if (-1 !== b.indexOf("chapter"))
-    if ("ads-320-100-backup-3" == a) {
-      if (!$("#fw_fanads_chapter_1 iframe").contents().find(".fbAdLoaded").length && !$("#fw_fanads_chapter_1 iframe").contents().find(".fbANRoot").length) {
-        var c = randomso(1, 5);
-        1 == c ? backupads("#" + a) : ($("#" + a).html('<div class="fb-middle" id="' + a + '-inside"></div>'), postscribe("#" + a + "-inside", '<script src="//media1.admicro.vn/jspartner/b135.js">\x3c/script>'))
-      }
-    } else "ads-320-100-backup-4" == a ? $("#fw_fanads_chapter_3 iframe").contents().find(".fbAdLoaded").length || $("#fw_fanads_chapter_3 iframe").contents().find(".fbANRoot").length || backupads("#" + a) : $("#fw_fanads_chapter_2 iframe").contents().find(".fbAdLoaded").length || $("#fw_fanads_chapter_2 iframe").contents().find(".fbANRoot").length || (c = randomso(1, 5), 1 == c ? backupads("#" + a) : ($("#" + a).html('<div class="fb-middle" id="' + a + '-inside"></div>'), postscribe("#" + a + "-inside", '<script src="//media1.admicro.vn/jspartner/b148.js">\x3c/script>')));
-  else $("#fw_fanads_story_1 iframe").contents().find(".fbAdLoaded").length || $("#fw_fanads_story_1 iframe").contents().find(".fbANRoot").length || backupads("#" + a)
-}
-
-function mobile_ads_load() {
-  if (!1 === $("#ads-320-100-backup-2").is(":visible")) return !1;
-  var a = $(".chapter-c").html().length,
-    b = $(".chapter-c").find("p, br, img, table"),
-    c = parseInt(b.length / 3);
-  b.eq(c).after('<div class="text-center w320 w320-middle ads-top ads-middle-mobile ads-holder" id="ads-320-100-backup-4"><div class="fb-middle"><div class="fbadlabel">Advertisement</div><div class="fbsp"><span>Sponsored (\u0110\u01b0\u1ee3c t\u00e0i tr\u1ee3)</span></div><div id="fw_fanads_chapter_3"></div></div></div>');
-  postscribe("#fw_fanads_chapter_3", '<div style="display:none;"><div id="fw_fanads_chapter_3_error" class="hidden"></div><script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw60-tag.js" async>\x3c/script><script type="text/javascript">window.ADNW = window.ADNW || {}; window.ADNW.v60 = window.ADNW.v60 || {};window.ADNW.v60.slots = window.ADNW.v60.slots || [];window.ADNW.v60.slots.push({rootElement: document.currentScript.parentElement,placementid: "333184773543272_927901327404944",format: "300x250",testmode: false, onAdLoaded: function(rootElement) {rootElement.style.display = "block";},onAdError: function(errorCode, errorMessage) {document.getElementById("fw_fanads_chapter_3_error").innerHTML = "Error";}});\x3c/script></div>');
-  setTimeout(function() {
-    check_interval("checkwidth", "interval_fw_fanads_chapter_3_cw", "ads-320-100-backup-4", "fw_fanads_chapter_3")
-  }, 1E3);
-  check_interval("check", "interval_fw_fanads_chapter_3", "ads-320-100-backup-4", "fw_fanads_chapter_3");
-  nextNode_remove("ads-320-100-backup-4");
-  1500 <= a && (b.eq(2 * c).after('<div class="text-center w320 w320-middle ads-middle ads-middle-mobile ads-holder" id="ads-320-100-backup-3"><div class="fb-middle"><div class="fbadlabel">Advertisement</div><div class="fbsp"><span>Sponsored (\u0110\u01b0\u1ee3c t\u00e0i tr\u1ee3)</span></div><div id="fw_fanads_chapter_1"></div></div></div>'), postscribe("#fw_fanads_chapter_1", '<div style="display:none;"><div id="fw_fanads_chapter_1_error" class="hidden"></div><script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw60-tag.js" async>\x3c/script><script type="text/javascript">window.ADNW = window.ADNW || {}; window.ADNW.v60 = window.ADNW.v60 || {};window.ADNW.v60.slots = window.ADNW.v60.slots || [];window.ADNW.v60.slots.push({rootElement: document.currentScript.parentElement,placementid: "333184773543272_545339108994503",format: "300x250",testmode: false, onAdLoaded: function(rootElement) {rootElement.style.display = "block";},onAdError: function(errorCode, errorMessage) {document.getElementById("fw_fanads_chapter_1_error").innerHTML = "Error";}});\x3c/script></div>'), setTimeout(function() {
-    check_interval("checkwidth", "interval_fw_fanads_chapter_1_cw", "ads-320-100-backup-3", "fw_fanads_chapter_1")
-  }, 1E3), check_interval("check", "interval_fw_fanads_chapter_1", "ads-320-100-backup-3", "fw_fanads_chapter_1"), nextNode_remove("ads-320-100-backup-3"));
-  6E3 <= a && (a = parseInt(c / 3), b.eq(a).after('<div class="text-center w320 w320-middle ads-top ads-middle-mobile ads-holder" id="ads-320-100-backup-5"><div class="fb-middle"><div class="fbadlabel">Advertisement</div><div class="fbsp"><span>Sponsored (\u0110\u01b0\u1ee3c t\u00e0i tr\u1ee3)</span></div><div id="fanads_chapter_1"></div></div></div>'), postscribe("#fanads_chapter_1", '<div style="display:none;"><div id="fanads_chapter_1_error" class="hidden"></div><div class="thirdPartyRoot"><div class="fbAdLink thirdPartyHeader"><div class="fbAdIcon thirdPartyIconClass"></div><div class="thirdPartySubtitleContainer"><div class="fbAdSubtitle thirdPartySubtitleClass"></div><div class="thirdPartySponsored">Sponsored (\u0110\u01b0\u1ee3c t\u00e0i tr\u1ee3)</div></div></div><div class="fbAdMedia fbAdLink thirdPartyMediaClass"></div><div class="thirdPartyFooter"><div class="fbAdLink fbAdTitle thirdPartyTitleClass"></div><div class="fbAdLink fbAdBody thirdPartyBodyClass"></div><div class="fbAdLink thirdPartyCallToActionWrapper"><div class="fbAdCallToAction thirdPartyCallToActionClass"></div></div></div></div><script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw60-tag.js" async>\x3c/script><script type="text/javascript">window.ADNW = window.ADNW || {}; window.ADNW.v60 = window.ADNW.v60 || {}; window.ADNW.v60.slots = window.ADNW.v60.slots || []; window.ADNW.v60.slots.push({ rootElement: document.currentScript.parentElement, placementid: "333184773543272_493575280837553", format: "native", testmode: false, onAdLoaded: function(rootElement) {rootElement.style.display = "block"; }, onAdError: function(errorCode, errorMessage) { document.getElementById("fanads_chapter_1_error").innerHTML = "Error";}});\x3c/script></div>'), check_interval("check", "interval_fanads_chapter_1", "ads-320-100-backup-5", "fanads_chapter_1"), a = parseInt(3 * c / 2), b.eq(a).after('<div class="text-center w320 w320-middle ads-top ads-middle-mobile ads-holder" id="ads-320-100-backup-6"><div class="fb-middle"><div class="fbadlabel">Advertisement</div><div class="fbsp"><span>Sponsored (\u0110\u01b0\u1ee3c t\u00e0i tr\u1ee3)</span></div><div id="fanads_chapter_2"></div></div></div>'), postscribe("#fanads_chapter_2", '<div style="display:none;"><div id="fanads_chapter_2_error" class="hidden"></div><div class="thirdPartyRoot"><div class="fbAdLink thirdPartyHeader"><div class="fbAdIcon thirdPartyIconClass"></div><div class="thirdPartySubtitleContainer"><div class="fbAdSubtitle thirdPartySubtitleClass"></div><div class="thirdPartySponsored">Sponsored (\u0110\u01b0\u1ee3c t\u00e0i tr\u1ee3)</div></div></div><div class="fbAdMedia fbAdLink thirdPartyMediaClass"></div><div class="thirdPartyFooter"><div class="fbAdLink fbAdTitle thirdPartyTitleClass"></div><div class="fbAdLink fbAdBody thirdPartyBodyClass"></div><div class="fbAdLink thirdPartyCallToActionWrapper"><div class="fbAdCallToAction thirdPartyCallToActionClass"></div></div></div></div><script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw60-tag.js" async>\x3c/script><script type="text/javascript">window.ADNW = window.ADNW || {}; window.ADNW.v60 = window.ADNW.v60 || {}; window.ADNW.v60.slots = window.ADNW.v60.slots || []; window.ADNW.v60.slots.push({ rootElement: document.currentScript.parentElement, placementid: "333184773543272_493848837476864", format: "native", testmode: false, onAdLoaded: function(rootElement) {rootElement.style.display = "block"; }, onAdError: function(errorCode, errorMessage) { document.getElementById("fanads_chapter_2_error").innerHTML = "Error";}});\x3c/script></div>'), check_interval("check", "interval_fanads_chapter_2", "ads-320-100-backup-6", "fanads_chapter_2"), c = parseInt(5 * c / 2), b.eq(c).after('<div class="text-center w320 w320-middle ads-top ads-middle-mobile ads-holder" id="ads-320-100-backup-7"><div class="fb-middle"><div class="fbadlabel">Advertisement</div><div class="fbsp"><span>Sponsored (\u0110\u01b0\u1ee3c t\u00e0i tr\u1ee3)</span></div><div id="fanads_chapter_3"></div></div></div>'), postscribe("#fanads_chapter_3", '<div style="display:none;"><div id="fanads_chapter_3_error" class="hidden"></div><div class="thirdPartyRoot"><div class="fbAdLink thirdPartyHeader"><div class="fbAdIcon thirdPartyIconClass"></div><div class="thirdPartySubtitleContainer"><div class="fbAdSubtitle thirdPartySubtitleClass"></div><div class="thirdPartySponsored">Sponsored (\u0110\u01b0\u1ee3c t\u00e0i tr\u1ee3)</div></div></div><div class="fbAdMedia fbAdLink thirdPartyMediaClass"></div><div class="thirdPartyFooter"><div class="fbAdLink fbAdTitle thirdPartyTitleClass"></div><div class="fbAdLink fbAdBody thirdPartyBodyClass"></div><div class="fbAdLink thirdPartyCallToActionWrapper"><div class="fbAdCallToAction thirdPartyCallToActionClass"></div></div></div></div><script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw60-tag.js" async>\x3c/script><script type="text/javascript">window.ADNW = window.ADNW || {}; window.ADNW.v60 = window.ADNW.v60 || {}; window.ADNW.v60.slots = window.ADNW.v60.slots || []; window.ADNW.v60.slots.push({ rootElement: document.currentScript.parentElement, placementid: "333184773543272_927901047404972", format: "native", testmode: false, onAdLoaded: function(rootElement) {rootElement.style.display = "block"; }, onAdError: function(errorCode, errorMessage) { document.getElementById("fanads_chapter_3_error").innerHTML = "Error";}});\x3c/script></div>'), check_interval("check", "interval_fanads_chapter_3", "ads-320-100-backup-7", "fanads_chapter_3"));
-  $(".ads-320-100-backup-2").html('<div class="fb-middle"><div class="fbadlabel">Advertisement</div><div class="fbsp"><span>Sponsored (\u0110\u01b0\u1ee3c t\u00e0i tr\u1ee3)</span></div><div id="fw_fanads_chapter_2"></div></div>');
-  postscribe("#fw_fanads_chapter_2", '<div style="display:none;"><div id="fw_fanads_chapter_2_error" class="hidden"></div><script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw60-tag.js" async>\x3c/script><script type="text/javascript">window.ADNW = window.ADNW || {}; window.ADNW.v60 = window.ADNW.v60 || {};window.ADNW.v60.slots = window.ADNW.v60.slots || [];window.ADNW.v60.slots.push({rootElement: document.currentScript.parentElement,placementid: "333184773543272_536656516529429",format: "300x250",testmode: false, onAdLoaded: function(rootElement) {rootElement.style.display = "block";},onAdError: function(errorCode, errorMessage) {document.getElementById("fw_fanads_chapter_2_error").innerHTML = "Error";}});\x3c/script></div>');
-  setTimeout(function() {
-    check_interval("checkwidth", "interval_fw_fanads_chapter_2_cw", "ads-320-100-backup-2", "fw_fanads_chapter_2")
-  }, 1E3);
-  check_interval("check", "interval_fw_fanads_chapter_2", "ads-320-100-backup-2", "fw_fanads_chapter_2")
-}
-$(window).resize(function() {
-  $("#fw_fanads_story_1").length && check_interval("checkwidth", "interval_fw_fanads_story_1_cw", "ads-320-100-backup-2", "fw_fanads_story_1");
-  $("#fw_fanads_chapter_1").length && check_interval("checkwidth", "interval_fw_fanads_chapter_1_cw", "ads-320-100-backup-3", "fw_fanads_chapter_1");
-  $("#fw_fanads_chapter_2").length && check_interval("checkwidth", "interval_fw_fanads_chapter_2_cw", "ads-320-100-backup-2", "fw_fanads_chapter_2");
-  $("#fw_fanads_chapter_3").length && check_interval("checkwidth", "interval_fw_fanads_chapter_3_cw", "ads-320-100-backup-4", "fw_fanads_chapter_3")
-});
-$(document).ready(function() {
-  $.browser.mobile && (randomso(1, 8), $("#ten-truyen").val() ? mobile_ads_load() : $(".ads-320-100-backup-2").length && !0 === $("#ads-320-100-backup-2").is(":visible") && ($(".ads-320-100-backup-2").addClass("w320-whitebg-stripe").html('<div class="fb-middle"><div class="fbadlabel">Advertisement</div><div class="fbsp"><span>Sponsored (\u0110\u01b0\u1ee3c t\u00e0i tr\u1ee3)</span></div><div id="fw_fanads_story_1"></div></div>'), postscribe("#fw_fanads_story_1", '<div style="display:none;"><div id="fw_fanads_story_1_error" class="hidden"></div><script type="text/javascript" src="https://connect.facebook.net/en_US/fbadnw60-tag.js" async>\x3c/script><script type="text/javascript">window.ADNW = window.ADNW || {}; window.ADNW.v60 = window.ADNW.v60 || {};window.ADNW.v60.slots = window.ADNW.v60.slots || [];window.ADNW.v60.slots.push({rootElement: document.currentScript.parentElement,placementid: "333184773543272_1104945843033824",format: "300x250",testmode: false, onAdLoaded: function(rootElement) {rootElement.style.display = "block";},onAdError: function(errorCode, errorMessage) {document.getElementById("fw_fanads_story_1_error").innerHTML = "Error";}});\x3c/script></div>'), setTimeout(function() {
-    check_interval("checkwidth", "interval_fw_fanads_story_1_cw", "ads-320-100-backup-2", "fw_fanads_story_1")
-  }, 1E3)))
 });
