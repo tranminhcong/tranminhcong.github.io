@@ -1,0 +1,416 @@
+getTrackingYomedia('//tracking.adsrv.io/api/user-sync/yomedia?uuid=55beaa189b1eeef451ebfb94fe0f8e4f&ord=1569404789936');
+var advId_4f78c06b63a54a979ce7909658a03137 = '2f5576e9954248b3a9acb8e73bc91cad';
+var campId_4f78c06b63a54a979ce7909658a03137 = 'dab0c42dd24f4d90821ae1db85931f94';
+var pubId_4f78c06b63a54a979ce7909658a03137 = '569db62975144b70901243eba53972e5';
+var chanId_4f78c06b63a54a979ce7909658a03137 = '3d58e13cbef3493682fe6107ac13e262';
+var placementId_4f78c06b63a54a979ce7909658a03137 = '4f78c06b63a54a979ce7909658a03137';
+
+//uuid: 55beaa189b1eeef451ebfb94fe0f8e4f
+function getTrackingYomedia(url) {
+	(new Image).src = url;
+}
+
+var yomediaId_4f78c06b63a54a979ce7909658a03137 = 'yomedia-balloon-expandable-4f78c06b63a54a979ce7909658a03137';
+function showBannerYomedia_4f78c06b63a54a979ce7909658a03137(s) {
+    if (document.getElementById(yomediaId_4f78c06b63a54a979ce7909658a03137)) {
+        return false;
+    }
+    var iframe_banner = document.createElement('iframe');
+    var clickTag = encodeURIComponent(getClickTagYomedia_4f78c06b63a54a979ce7909658a03137());
+    var creative_src = 'https://media.yomedia.vn/2019/09/wipro-romano-awo/balloon/index.html?pid=4f78c06b63a54a979ce7909658a03137&aid=71a4436d59614f14a703efe435e39e66&fid=7883fbbac239456687b31b2d8760da3f&advId=2f5576e9954248b3a9acb8e73bc91cad&campId=dab0c42dd24f4d90821ae1db85931f94&pubId=569db62975144b70901243eba53972e5&chanId=3d58e13cbef3493682fe6107ac13e262&clk=' + clickTag;
+    iframe_banner.setAttribute('src', creative_src);
+    iframe_banner.setAttribute('id', yomediaId_4f78c06b63a54a979ce7909658a03137);
+    iframe_banner.setAttribute('allowFullScreen', '');
+    iframe_banner.style.cssText = 'right:0px;bottom:0px;display:block;line-height:normal;overflow:hidden;position:fixed;z-index:1999999 !important;border:0;width:500px !important;height:300px !important;';
+    iframe_banner.width = '500';
+    iframe_banner.height = '300';
+    document.body.appendChild(iframe_banner);
+    impressionTrackingYomedia_4f78c06b63a54a979ce7909658a03137();
+}
+function minYoMediaPopupAd_4f78c06b63a54a979ce7909658a03137() {
+    var sPos = 'right-bottom';
+    avlInteractModule.rectAd(yomediaId_4f78c06b63a54a979ce7909658a03137, 'top-down', sPos, 'min', parseInt('300'), parseInt('250'), parseInt('500'), parseInt('300'), parseInt('150'));
+    viewableBySzieBannerYomedia_4f78c06b63a54a979ce7909658a03137(document.getElementById(yomediaId_4f78c06b63a54a979ce7909658a03137), parseInt('300'), parseInt('250'));
+}
+function restoreYoMediaPopupAd_4f78c06b63a54a979ce7909658a03137() {
+    var sPos = 'right-bottom';
+    avlInteractModule.rectAd(yomediaId_4f78c06b63a54a979ce7909658a03137, 'top-down', sPos, 'max', parseInt('300'), parseInt('250'), parseInt('500'), parseInt('300'), parseInt('150'));
+    viewableBySzieBannerYomedia_4f78c06b63a54a979ce7909658a03137(document.getElementById(yomediaId_4f78c06b63a54a979ce7909658a03137), parseInt('300'), parseInt('250'));
+}
+function setYoMediaExpand_4f78c06b63a54a979ce7909658a03137() {
+    var sPos = 'right-bottom';
+    avlInteractModule.rectExpand(yomediaId_4f78c06b63a54a979ce7909658a03137, 'ex', sPos, parseInt('300'), parseInt('250'), parseInt('500'), parseInt('300'));
+    viewableBySzieBannerYomedia_4f78c06b63a54a979ce7909658a03137(document.getElementById(yomediaId_4f78c06b63a54a979ce7909658a03137), parseInt('300'), parseInt('250'));
+}
+function setYoMediaPre_4f78c06b63a54a979ce7909658a03137() {
+    var sPos = 'right-bottom';
+    avlInteractModule.rectExpand(yomediaId_4f78c06b63a54a979ce7909658a03137, 'pre', sPos, parseInt('300'), parseInt('250'), parseInt('500'), parseInt('300'));
+    viewableBySzieBannerYomedia_4f78c06b63a54a979ce7909658a03137(document.getElementById(yomediaId_4f78c06b63a54a979ce7909658a03137), parseInt('300'), parseInt('250'));
+}
+function closeYoMediaPopupAd_4f78c06b63a54a979ce7909658a03137() {
+    avlInteractModule.closeAd(yomediaId_4f78c06b63a54a979ce7909658a03137, parseInt('900000'), 'showBannerYomedia_4f78c06b63a54a979ce7909658a03137');
+    destroyViewableBannerYomedia_4f78c06b63a54a979ce7909658a03137();
+}
+var trackingViewable_4f78c06b63a54a979ce7909658a03137 = false, interval_4f78c06b63a54a979ce7909658a03137 = null, timeTrackingViewable_4f78c06b63a54a979ce7909658a03137 = 2000;
+
+function viewableBannerYomedia_4f78c06b63a54a979ce7909658a03137(event) {
+    if (!trackingViewable_4f78c06b63a54a979ce7909658a03137) {
+        if (viewHalfBannerYomedia_4f78c06b63a54a979ce7909658a03137(this)) {
+            if (interval_4f78c06b63a54a979ce7909658a03137 === null) {
+                var time = 0;
+                interval_4f78c06b63a54a979ce7909658a03137 = setInterval(function() {
+                    time += 10;
+                    if (time >= timeTrackingViewable_4f78c06b63a54a979ce7909658a03137) {
+                        if (!trackingViewable_4f78c06b63a54a979ce7909658a03137) {
+                            viewableTrackingYomedia_4f78c06b63a54a979ce7909658a03137();
+                            trackingViewable_4f78c06b63a54a979ce7909658a03137 = true;
+                            clearInterval(interval_4f78c06b63a54a979ce7909658a03137);
+                            interval_4f78c06b63a54a979ce7909658a03137 = null;
+                        }
+                    }
+                }, 10);
+            }
+        } else {
+            destroyViewableBannerYomedia_4f78c06b63a54a979ce7909658a03137()
+        }
+    }
+}
+
+function viewableBySzieBannerYomedia_4f78c06b63a54a979ce7909658a03137(obj, width, height) {
+    if (!obj) {
+        return false;
+    }
+    if (!trackingViewable_4f78c06b63a54a979ce7909658a03137) {
+        var rect = getClientRectBannerYomedia_4f78c06b63a54a979ce7909658a03137(obj);
+        var check = true;
+        if (rect && (rect.width < width || rect.height < height)) {
+            check = false;
+        }
+        if (check && obj.offsetHeight >= height && obj.style.display != 'none' && obj.style.visibility != 'hidden') {
+            if (interval_4f78c06b63a54a979ce7909658a03137 === null) {
+                var time = 0;
+                interval_4f78c06b63a54a979ce7909658a03137 = setInterval(function() {
+                    time += 10;
+                    if (time >= timeTrackingViewable_4f78c06b63a54a979ce7909658a03137) {
+                        if (!trackingViewable_4f78c06b63a54a979ce7909658a03137) {
+                            viewableTrackingYomedia_4f78c06b63a54a979ce7909658a03137();
+                            trackingViewable_4f78c06b63a54a979ce7909658a03137 = true;
+                            clearInterval(interval_4f78c06b63a54a979ce7909658a03137);
+                            interval_4f78c06b63a54a979ce7909658a03137 = null;
+                        }
+                    }
+                }, 10);
+            }
+        } else {
+            destroyViewableBannerYomedia_4f78c06b63a54a979ce7909658a03137()
+        }
+    }
+}
+
+function destroyViewableBannerYomedia_4f78c06b63a54a979ce7909658a03137() {
+    if (interval_4f78c06b63a54a979ce7909658a03137 !== null) {
+        clearInterval(interval_4f78c06b63a54a979ce7909658a03137);
+        interval_4f78c06b63a54a979ce7909658a03137 = null;
+    }
+}
+
+function viewHalfBannerYomedia_4f78c06b63a54a979ce7909658a03137(obj) {
+    if (!obj) {
+        return false;
+    }
+    var elementHeight = obj.clientHeight;
+    var vpH = getViewPortHeightYomedia_4f78c06b63a54a979ce7909658a03137(),
+        windowY = window.scroller().y, // Scroll Top
+        elementY = getOffsetYYomedia_4f78c06b63a54a979ce7909658a03137(obj) + elementHeight/2;
+    ybottom = elementY + elementHeight/8;
+    endViewPort = vpH + windowY;
+    return !(elementY > endViewPort || ybottom < windowY);
+}
+
+function viewFullBannerYomedia_4f78c06b63a54a979ce7909658a03137(obj) {
+    if (!obj) {
+        return false;
+    }
+    var vpH = getViewPortHeightYomedia_4f78c06b63a54a979ce7909658a03137(),
+        windowY = window.scroller().y, // Scroll Top
+        elementY = getOffsetYYomedia_4f78c06b63a54a979ce7909658a03137(obj);
+    elementHeight = obj.clientHeight;
+    ybottom = elementY + elementHeight;
+    endViewPort = vpH + windowY;
+    
+    return !(elementY > endViewPort || ybottom < windowY);
+}
+
+function viewHalfBannerYomediaNew_4f78c06b63a54a979ce7909658a03137(wd, obj) {
+    if (!obj) {
+        return false;
+    }
+    if (typeof wd.scroller !== 'function') {
+        wd.scroller = function() {
+            var x = 0;
+            var y = 0;
+            if (typeof wd.pageYOffset == "number") {
+                y = wd.pageYOffset;
+                x = wd.pageXOffset;
+            } else if (wd.document.body && (wd.document.body.scrollLeft || wd.document.body.scrollTop)) {
+                y = wd.document.body.scrollTop;
+                x = wd.document.body.scrollLeft;
+            } else if (wd.document.documentElement && (wd.document.documentElement.scrollLeft || wd.document.documentElement.scrollTop)) {
+                y = wd.document.documentElement.scrollTop;
+                x = wd.document.documentElement.scrollLeft;
+            }
+            return {
+                x: x,
+                y: y
+            };
+        }
+    }
+    var elementHeight = obj.clientHeight;
+    var vpH = getViewPortHeightYomediaNew_4f78c06b63a54a979ce7909658a03137(wd),
+        windowY = wd.scroller().y,
+        elementY = getOffsetYYomedia_4f78c06b63a54a979ce7909658a03137(obj) + elementHeight/2;
+    ybottom = elementY + elementHeight/8;
+    endViewPort = vpH + windowY;
+    return !(elementY > endViewPort || ybottom < windowY);
+}
+
+function viewFullBannerYomediaNew_4f78c06b63a54a979ce7909658a03137(wd, obj) {
+    if (!obj) {
+        return false;
+    }
+    if (typeof wd.scroller !== 'function') {
+        wd.scroller = function() {
+            var x = 0;
+            var y = 0;
+            if (typeof wd.pageYOffset == "number") {
+                y = wd.pageYOffset;
+                x = wd.pageXOffset;
+            } else if (wd.document.body && (wd.document.body.scrollLeft || wd.document.body.scrollTop)) {
+                y = wd.document.body.scrollTop;
+                x = wd.document.body.scrollLeft;
+            } else if (wd.document.documentElement && (wd.document.documentElement.scrollLeft || wd.document.documentElement.scrollTop)) {
+                y = wd.document.documentElement.scrollTop;
+                x = wd.document.documentElement.scrollLeft;
+            }
+            return {
+                x: x,
+                y: y
+            };
+        }
+    }
+    var vpH = getViewPortHeightYomediaNew_4f78c06b63a54a979ce7909658a03137(wd),
+        windowY = wd.scroller().y, // Scroll Top
+        elementY = getOffsetYYomedia_4f78c06b63a54a979ce7909658a03137(obj);
+    elementHeight = obj.clientHeight;
+    ybottom = elementY + elementHeight;
+    endViewPort = vpH + windowY;
+    
+    return !(elementY > endViewPort || ybottom < windowY);
+}
+
+function getViewPortHeightYomedia_4f78c06b63a54a979ce7909658a03137() {
+    var de = document.documentElement;
+
+    if (!!window.innerWidth) {
+        return window.innerHeight;
+    } else if (de && !isNaN(de.clientHeight)) {
+        return de.clientHeight;
+    }
+
+    return 0;
+}
+
+function getViewPortHeightYomediaNew_4f78c06b63a54a979ce7909658a03137(wd) {
+    var de = wd.document.documentElement;
+
+    if (!!wd.innerWidth) {
+        return wd.innerHeight;
+    } else if (de && !isNaN(de.clientHeight)) {
+        return de.clientHeight;
+    }
+
+    return 0;
+}
+
+window.scroller = function() {
+    var x = 0;
+    var y = 0;
+    if (typeof window.pageYOffset == "number") {
+        y = window.pageYOffset;
+        x = window.pageXOffset;
+    } else if (document.body && (document.body.scrollLeft || document.body.scrollTop)) {
+        y = document.body.scrollTop;
+        x = document.body.scrollLeft;
+    } else if (document.documentElement && (document.documentElement.scrollLeft || document.documentElement.scrollTop)) {
+        y = document.documentElement.scrollTop;
+        x = document.documentElement.scrollLeft;
+    }
+    return {
+        x: x,
+        y: y
+    };
+}
+
+function getOffsetYYomedia_4f78c06b63a54a979ce7909658a03137(obj) {
+    var y = 0;
+    if (obj.offsetParent) {
+        while (obj) {
+            y += obj.offsetTop;
+            obj = obj.offsetParent;
+        }
+    } else if (obj.y) {
+        y += obj.y;
+    }
+    return y;
+}
+
+function getClientRectBannerYomedia_4f78c06b63a54a979ce7909658a03137(obj) {
+    var rect = null;
+    var clip = obj.style.clip;
+    if (clip) {
+        if (clip == 'auto' || clip == 'initial' || clip == 'inherit') {
+            rect = obj.getBoundingClientRect();
+        } else {
+            var STRIP_COMMENTS = /(\/\/.*$)|(\/\*[\s\S]*?\*\/)|(px)|(\s*=[^,\)]*(('(?:\\'|[^'\r\n])*')|("(?:\\"|[^"\r\n])*"))|(\s*=[^,\)]*))/mg;
+            var ARGUMENT_NAMES = /([^\s]+)/g;
+            clip = clip.toString().replace(STRIP_COMMENTS, '');
+            var result = clip.slice(clip.indexOf('(')+1, clip.indexOf(')')).match(ARGUMENT_NAMES);
+            if(result) {
+                rect = {
+                    top: parseInt(result[0]),
+                    right: parseInt(result[1]),
+                    bottom: parseInt(result[2]),
+                    left: parseInt(result[3])
+                }
+                rect.width = (rect.right > rect.left) ? (rect.right - rect.left) : 0;
+                rect.height = (rect.bottom > rect.top) ? (rect.bottom - rect.top) : 0;
+            }
+        }
+    }
+    return rect;
+}
+showBannerYomedia_4f78c06b63a54a979ce7909658a03137(1);
+function impressionTrackingYomedia_4f78c06b63a54a979ce7909658a03137() {
+    getTrackingYomedia('https://tracking.yomedia.vn/display?evt=002&token=bf1e47e255b2928797deeaacf32fa1c41604e70a18&ord=1569404789936' + Date.now());
+    getTrackingYomedia('//visitanalytics.userreport.com/hit.gif?t=YPV905eb9fe&ord=1569404789936');
+    getTrackingYomedia('//dmp-log.yomedia.vn/api/log/dmp-event?fid=525000539&ev=impression&rd=1569404789936&uuid=55beaa189b1eeef451ebfb94fe0f8e4f&urlRef=https%3A%2F%2Ftruyencv.com%2F');
+    if (typeof _YoImp != 'undefined' && avlHelperModule.validateUrl(_YoImp)) {
+        console.log(_YoImp)
+        getTrackingYomedia(_YoImp);
+    }
+}
+
+function viewableTrackingYomedia_4f78c06b63a54a979ce7909658a03137() {
+    getTrackingYomedia('https://tracking.yomedia.vn/display?evt=008&token=bf1e47e255b2928797deeaacf32fa1c416048045b1&ord=1569404789936' + Date.now());
+}
+
+function clickTrackingYomedia_4f78c06b63a54a979ce7909658a03137() {
+    getTrackingYomedia('//visitanalytics.userreport.com/hit.gif?t=YPVaffbb37d&event=click&ord=1569404789936');
+    getTrackingYomedia('//dmp-log.yomedia.vn/api/log/dmp-event?fid=525000539&ev=click&rd=1569404789936&uuid=55beaa189b1eeef451ebfb94fe0f8e4f&urlRef=https%3A%2F%2Ftruyencv.com%2F');
+    if (typeof _YoClick != 'undefined' && avlHelperModule.validateUrl(_YoClick)) {
+        getTrackingYomedia(_YoClick);
+    }
+        var landingPage = 'https://tracking.yomedia.vn/display?evt=009&token=bf1e47e255b2928797deeaacf32fa1c416043108a8&to=https%3A%2F%2Fc.lazada.vn%2Ft%2Fc.YwT7%3Fintent%3Dfalse%26fallback%3Dtrue%26url%3Dhttps%253A%252F%252Fwww.lazada.vn%252Fshop%252Fromano-store%252F&ord=1569404789936' + Date.now();
+        var isMac = /Mac|iPhone|iPod|iPad/.test(navigator.userAgent) && /\sSafari\//.test(navigator.userAgent);
+        if (!isMac) {
+            window.open(landingPage, '_blank');
+        }
+    window.parent.postMessage("LgTopBanner","*");
+}
+
+function clickTracking3rdYomedia_4f78c06b63a54a979ce7909658a03137() {
+    getTrackingYomedia('//visitanalytics.userreport.com/hit.gif?t=YPVaffbb37d&event=click&ord=1569404789936');
+    getTrackingYomedia('//dmp-log.yomedia.vn/api/log/dmp-event?fid=525000539&ev=click&rd=1569404789936&uuid=55beaa189b1eeef451ebfb94fe0f8e4f&urlRef=https%3A%2F%2Ftruyencv.com%2F');
+    if (typeof _YoClick != 'undefined' && avlHelperModule.validateUrl(_YoClick)) {
+        getTrackingYomedia(_YoClick);
+    }
+    window.parent.postMessage("LgTopBanner","*");
+}
+
+function getClickTagYomedia_4f78c06b63a54a979ce7909658a03137() {
+    var landingPage = '';
+    landingPage = 'https://tracking.yomedia.vn/display?evt=009&token=bf1e47e255b2928797deeaacf32fa1c416043108a8&to=https%3A%2F%2Fc.lazada.vn%2Ft%2Fc.YwT7%3Fintent%3Dfalse%26fallback%3Dtrue%26url%3Dhttps%253A%252F%252Fwww.lazada.vn%252Fshop%252Fromano-store%252F&ord=1569404789936' + Date.now();
+    return landingPage;
+}
+function addAnEventListener_4f78c06b63a54a979ce7909658a03137(obj,evt,func){
+    if ('addEventListener' in obj){
+        obj.addEventListener(evt,func, false);
+    } else if ('attachEvent' in obj){//IE
+        obj.attachEvent('on'+evt,func);
+    }
+}
+function iFrameListener_4f78c06b63a54a979ce7909658a03137(event){
+    try {
+        fn_4f78c06b63a54a979ce7909658a03137 = event.data;
+        if ('string' == typeof fn_4f78c06b63a54a979ce7909658a03137 &&  fn_4f78c06b63a54a979ce7909658a03137.toLowerCase().indexOf('yomedia') >= 0 && fn_4f78c06b63a54a979ce7909658a03137.indexOf('_4f78c06b63a54a979ce7909658a03137();') >= 0 ) {
+            eval(fn_4f78c06b63a54a979ce7909658a03137);
+        }
+    }
+    catch(err) {}
+}
+var fn_4f78c06b63a54a979ce7909658a03137='';
+addAnEventListener_4f78c06b63a54a979ce7909658a03137(window,'message',iFrameListener_4f78c06b63a54a979ce7909658a03137);
+// http
+
+// comScore
+var _comscore = _comscore || [];
+_comscore.push({ c1: "8", c2: "18889311" ,c3: "2016070110000000012" });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+// comScore
+var _comscore = _comscore || [];
+_comscore.push({ c1: "8", c2: "18889311" ,c3: "2016070110000000001" });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+// comScore
+var _comscore = _comscore || [];
+_comscore.push({ c1: "8", c2: "18889311" ,c3: "2016070110000000022" });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+// comScore
+var _comscore = _comscore || [];
+_comscore.push({ c1: "8", c2: "18889311" ,c3: "2016070110000000003" });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+// comScore
+var _comscore = _comscore || [];
+_comscore.push({ c1: "8", c2: "18889311" ,c3: "2016070110000000012" });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+// comScore
+var _comscore = _comscore || [];
+_comscore.push({ c1: "8", c2: "18889311" ,c3: "2016070110000000006" });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+// comScore
+var _comscore = _comscore || [];
+_comscore.push({ c1: "8", c2: "18889311" ,c3: "2016070110000000009" });
+(function() {
+var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+el.parentNode.insertBefore(s, el);
+})();
+/*(function() {
+    var u="//ss.yomedia.vn/js/1/127/ads.js";
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u; s.parentNode.insertBefore(g,s);
+})();*/
+getTrackingYomedia('https://analytics.yomedia.vn/col?ref=https%3A%2F%2Ftruyencv.com%2F&ord=1569404789936');
